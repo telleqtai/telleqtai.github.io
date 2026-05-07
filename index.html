@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#353436",
+                    "tertiary": "#dec29a",
+                    "on-tertiary-fixed": "#271901",
+                    "primary-container": "#0f172a",
+                    "secondary": "#7bd0ff",
+                    "tertiary-fixed": "#fcdeb5",
+                    "surface": "#131315",
+                    "inverse-on-surface": "#303032",
+                    "primary": "#bec6e0",
+                    "secondary-container": "#00a6e0",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "background": "#131315",
+                    "surface-container": "#1f1f21",
+                    "outline": "#909097",
+                    "on-secondary": "#00354a",
+                    "tertiary-fixed-dim": "#dec29a",
+                    "on-primary-container": "#798098",
+                    "on-error": "#690005",
+                    "on-secondary-fixed-variant": "#004c69",
+                    "on-secondary-fixed": "#001e2c",
+                    "on-background": "#e4e2e4",
+                    "surface-bright": "#39393b",
+                    "soft-cyan": "#22D3EE",
+                    "surface-container-low": "#1b1b1d",
+                    "graphite": "#1E293B",
+                    "surface-container-lowest": "#0e0e10",
+                    "on-tertiary-fixed-variant": "#574425",
+                    "surface-tint": "#bec6e0",
+                    "on-tertiary-container": "#957d5a",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#2a2a2b",
+                    "on-surface-variant": "#c6c6cd",
+                    "inverse-primary": "#565e74",
+                    "inverse-surface": "#e4e2e4",
+                    "surface-dim": "#131315",
+                    "cool-gray": "#94A3B8",
+                    "tertiary-container": "#231500",
+                    "secondary-fixed-dim": "#7bd0ff",
+                    "surface-white": "#F8FAFC",
+                    "on-tertiary": "#3e2d11",
+                    "on-primary-fixed": "#131b2e",
+                    "error-container": "#93000a",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e4e2e4",
+                    "primary-fixed": "#dae2fd",
+                    "surface-variant": "#353436",
+                    "electric-blue": "#0EA5E9",
+                    "secondary-fixed": "#c4e7ff",
+                    "on-secondary-container": "#00374d",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary": "#283044",
+                    "deep-navy": "#0A0F1D",
+                    "outline-variant": "#45464d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "component-padding": "24px",
+                    "max-container": "1280px",
+                    "content-gap": "80px",
+                    "section-gap": "160px",
+                    "grid-gutter": "32px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "h1-enterprise": ["Manrope"],
+                    "display-hero": ["Manrope"],
+                    "body-intro": ["Inter"],
+                    "h2-section": ["Manrope"],
+                    "button-text": ["Inter"],
+                    "body-standard": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "h1-enterprise": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "body-intro": ["20px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "h2-section": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button-text": ["15px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-standard": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .hero-visual {
+            opacity: 0.78;
+        }
+        .hero-visual::before,
+        .hero-visual::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .hero-visual::before {
+            z-index: 2;
+            opacity: 0.42;
+            background-image:
+                linear-gradient(rgba(123, 208, 255, 0.34) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(123, 208, 255, 0.24) 1px, transparent 1px);
+            background-size: 72px 72px;
+            mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
+            animation: heroGridDrift 13s linear infinite;
+        }
+        .hero-visual::after {
+            z-index: 5;
+            opacity: 0.62;
+            background:
+                radial-gradient(circle at 18% 34%, rgba(34, 211, 238, 0.36), transparent 26%),
+                linear-gradient(115deg, transparent 12%, rgba(123, 208, 255, 0.34) 48%, transparent 76%);
+            mix-blend-mode: screen;
+            transform: translateX(-18%);
+            animation: heroLightSweep 8s ease-in-out infinite;
+        }
+        .hero-bg-image {
+            transform: scale(1.045);
+            filter: saturate(1.18) contrast(1.12);
+            animation: heroImageDrift 18s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+        .hero-scanline {
+            position: absolute;
+            inset: 0;
+            z-index: 4;
+            opacity: 0.16;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent 0,
+                transparent 9px,
+                rgba(123, 208, 255, 0.42) 10px,
+                transparent 11px
+            );
+            animation: heroScanline 5s linear infinite;
+        }
+        @keyframes heroImageDrift {
+            0% { transform: scale(1.045) translate3d(-1.4%, -1.1%, 0); }
+            100% { transform: scale(1.095) translate3d(1.6%, 1.1%, 0); }
+        }
+        @keyframes heroGridDrift {
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 72px 72px, 72px 72px; }
+        }
+        @keyframes heroLightSweep {
+            0%, 100% { transform: translateX(-26%); opacity: 0.32; }
+            50% { transform: translateX(24%); opacity: 0.72; }
+        }
+        @keyframes heroScanline {
+            0% { background-position-y: 0; }
+            100% { background-position-y: 96px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-bg-image,
+            .hero-scanline,
+            .hero-visual::before,
+            .hero-visual::after {
+                animation: none;
+            }
+        }
+    </style>
+<title>Telleqt | AI Transformation</title>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<style id="telleqt-responsive-overrides">
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  .grid > *,
+  .flex > * {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  button,
+  li {
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 767px) {
+    .px-grid-gutter {
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+    }
+
+    header.fixed .px-grid-gutter,
+    nav.fixed .px-grid-gutter {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .py-section-gap {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .pt-40 {
+      padding-top: 7rem !important;
+    }
+
+    .pb-section-gap {
+      padding-bottom: 4.5rem !important;
+    }
+
+    .mb-section-gap {
+      margin-bottom: 4.5rem !important;
+    }
+
+    .gap-grid-gutter {
+      gap: 1.5rem !important;
+    }
+
+    .gap-content-gap,
+    .gap-24 {
+      gap: 2rem !important;
+    }
+
+    .p-12,
+    .p-10,
+    .p-8 {
+      padding: 1.5rem !important;
+    }
+
+    .py-24,
+    .py-20 {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .text-display-hero {
+      font-size: clamp(2.1rem, 9vw, 3rem) !important;
+      line-height: 1.12 !important;
+      letter-spacing: 0 !important;
+      overflow-wrap: anywhere;
+      hyphens: auto;
+    }
+
+    .text-h1-enterprise {
+      font-size: clamp(2rem, 8vw, 2.5rem) !important;
+      line-height: 1.18 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .text-h2-section {
+      font-size: clamp(1.5rem, 6.5vw, 2rem) !important;
+      line-height: 1.25 !important;
+    }
+
+    .text-body-intro {
+      font-size: 1.0625rem !important;
+      line-height: 1.55 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .max-w-2xl,
+    .max-w-3xl,
+    .max-w-4xl {
+      max-width: 100% !important;
+    }
+
+    main section:first-of-type .flex.flex-col.sm\:flex-row {
+      align-items: flex-start !important;
+    }
+
+    main section:first-of-type .flex.flex-col.sm\:flex-row > a,
+    main section:first-of-type .flex.flex-col.sm\:flex-row > button {
+      width: auto !important;
+      max-width: 100% !important;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .h-\[400px\],
+    .h-\[500px\] {
+      height: auto !important;
+      min-height: 20rem;
+    }
+
+    .-left-8 {
+      left: 1rem !important;
+    }
+
+    .-bottom-8 {
+      bottom: 1rem !important;
+    }
+  }
+</style>
+</head>
+<body class="bg-deep-navy text-on-background selection:bg-electric-blue selection:text-white">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 w-full z-50 dark:bg-deep-navy/90 backdrop-blur-xl border-b border-outline/10 shadow-sm">
+<div class="flex justify-between items-center h-20 px-grid-gutter max-w-max-container mx-auto">
+<a class="font-h2-section text-h2-section font-bold text-surface-white tracking-tight" href="index.html">Telleqt</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-standard text-body-standard text-secondary font-semibold transition-colors duration-200" href="index.html">Home</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="approach.html">Approach</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="ai-technologies.html">AI Expertise</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="technology.html">Own technology</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="industries.html">Industries</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="about.html">About Us</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="contact.html">Contact</a>
+</nav>
+<a class="bg-electric-blue text-white px-6 py-3 rounded-lg font-button-text text-button-text scale-95 active:scale-90 transition-transform hover:bg-soft-cyan" href="contact.html">
+                Get Started
+            </a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-40 pb-section-gap overflow-hidden">
+<div class="hero-visual absolute inset-0 z-0 overflow-hidden">
+<img alt="Abstract data flow" class="hero-bg-image w-full h-full object-cover" data-alt="A sophisticated digital visualization of complex real-time data flows, featuring glowing blue and cyan particles forming structured network grids. The background is a deep, immersive navy black, creating a sense of infinite depth. The lighting is focused on sharp, luminous lines that suggest high-speed algorithmic processing and enterprise-level technical precision. The aesthetic is professional, architectural, and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtXjZpWYYbH-apMrlXeFeoy18vx_wP7Xx2d_QHEYW8eqNbpjKJq6sK1Bd1EBNVJ1pBTorsRkR44gzSztMecbQPABQNvuqL4Z3cFVPwmt0_EG2LPDyDQoKbmlZHzazE32zc7RrGzt2g_Fce3izy_fhJBojfm8kz-MUNSWVHf7vCrJgTjW1zGNDcr1rZThuq0Rzzf9wm8nM3-EEqQjKfagT3yxasacCeUkvNMnG58FyEhYrKtMGE7XZdrypc6FPjTB8hIfaBLsc6UhD5"/>
+<div class="hero-scanline"></div>
+<div class="absolute inset-0 z-[7] bg-gradient-to-b from-deep-navy via-deep-navy/20 to-deep-navy"></div>
+</div>
+<div class="max-w-max-container mx-auto px-grid-gutter relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block font-label-caps text-label-caps text-secondary mb-6 tracking-[0.2em] uppercase">Enterprise AI Recovery</span>
+<h1 class="font-display-hero text-display-hero text-surface-white mb-8">Turning Struggling Digital Transformations Into AI Success</h1>
+<p class="font-body-intro text-body-intro text-cool-gray mb-12">Telleqt helps companies turn failed transformation efforts into practical AI-driven results, focused on cost savings, automation, and measurable operational impact</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-electric-blue text-white px-8 py-4 rounded-lg font-button-text text-button-text transition-all hover:bg-soft-cyan" href="approach.html">Explore Our Approach</a>
+<a class="border border-cool-gray text-surface-white px-8 py-4 rounded-lg font-button-text text-button-text transition-all hover:bg-graphite" href="contact.html">Contact Us</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Logo Strip -->
+<section class="py-20 bg-surface-container-lowest border-y border-outline/5">
+<div class="max-w-max-container mx-auto px-grid-gutter">
+<p class="text-center font-label-caps text-label-caps text-cool-gray mb-12 uppercase">Our Team Has Helped</p>
+<div class="flex flex-wrap justify-center items-center gap-x-20 gap-y-10">
+<img alt="Globe Telecom" class="h-16 max-w-[240px] object-contain brightness-0 invert" src="logos/Globe_Telecom_logo.svg"/>
+<img alt="iTail" class="h-24 max-w-[220px] object-contain" src="logos/iTail_logo.png"/>
+<img alt="Telenor" class="h-16 max-w-[240px] object-contain brightness-0 invert" src="logos/Telenor_Logo.svg"/>
+<img alt="Ericsson" class="h-20 max-w-[180px] object-contain" src="logos/Ercisson_logo.png"/>
+<img alt="Smart Communications" class="h-16 max-w-[220px] object-contain" src="logos/Smart_logo.png"/>
+</div>
+</div>
+</section>
+<!-- Why Telleqt Bento Grid -->
+<section class="py-section-gap">
+<div class="max-w-max-container mx-auto px-grid-gutter">
+<div class="mb-16">
+<h2 class="font-h2-section text-h2-section text-surface-white mb-4">Why Telleqt</h2>
+<div class="h-1 w-20 bg-electric-blue"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
+<!-- Large Card 1 -->
+<div class="md:col-span-8 glass-panel p-10 rounded-xl group hover:border-secondary/30 transition-all">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start gap-6 mb-8">
+<span class="material-symbols-outlined text-4xl text-secondary">track_changes</span>
+<div class="bg-secondary/10 px-3 py-1 rounded text-secondary text-xs font-label-caps uppercase">Outcome-led</div>
+</div>
+<h3 class="font-h2-section text-2xl text-surface-white mb-4">Outcomes, not tools</h3>
+<p class="font-body-standard text-cool-gray mb-8 max-w-xl">We stay focused on measurable business impact, not tool selection or vendor hype. Before recommending any AI solution we start by finding where value is lost.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex items-start gap-3 font-body-standard text-cool-gray">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span>Fragmented systems → duplicated effort</span>
+</div>
+<div class="flex items-start gap-3 font-body-standard text-cool-gray">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span>Delayed decisions → missed value</span>
+</div>
+<div class="flex items-start gap-3 font-body-standard text-cool-gray">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span>Manual workflows → hidden cost and errors</span>
+</div>
+<div class="flex items-start gap-3 font-body-standard text-cool-gray">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span>Limited visibility → poor allocation</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="md:col-span-4 bg-graphite/50 border border-outline/10 p-10 rounded-xl group hover:border-secondary/30 transition-all">
+<span class="material-symbols-outlined text-4xl text-secondary mb-8">person_pin_circle</span>
+<h3 class="font-h2-section text-2xl text-surface-white mb-4">Personalized</h3>
+<p class="font-body-standard text-cool-gray">No generic wrappers. We build bespoke architectures tailored to your unique operational constraints and proprietary data silos.</p>
+</div>
+<!-- Small Card 2 -->
+<div class="md:col-span-4 bg-graphite/50 border border-outline/10 p-10 rounded-xl group hover:border-secondary/30 transition-all">
+<span class="material-symbols-outlined text-4xl text-secondary mb-8">settings_input_component</span>
+<h3 class="font-h2-section text-2xl text-surface-white mb-4">Implementation First</h3>
+<p class="font-body-standard text-cool-gray">We value working code over slide decks. Our approach starts with integrating into your existing pipelines from day one.</p>
+</div>
+<!-- Large Card 2 -->
+<div class="md:col-span-8 glass-panel p-10 rounded-xl group hover:border-secondary/30 transition-all">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary mb-8">savings</span>
+<div class="bg-secondary/10 px-3 py-1 rounded text-secondary text-xs font-label-caps uppercase">Operational ROI</div>
+</div>
+<h3 class="font-h2-section text-2xl text-surface-white mb-4">Focused on Cost Savings</h3>
+<p class="font-body-standard text-cool-gray mb-8 max-w-xl">AI is an efficiency engine, not a luxury. We measure success by the tangible reduction in operational overhead and the scaling of human intelligence through automated systems.</p>
+<div class="flex gap-12">
+<div>
+<div class="text-3xl font-h1-enterprise text-surface-white mb-1">40%</div>
+<div class="text-xs font-label-caps text-cool-gray uppercase">Avg Cost Reduction</div>
+</div>
+<div>
+<div class="text-3xl font-h1-enterprise text-surface-white mb-1">6mo</div>
+<div class="text-xs font-label-caps text-cool-gray uppercase">Payback Period</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-section-gap bg-surface-container-low relative overflow-hidden">
+<div class="max-w-max-container mx-auto px-grid-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="font-h1-enterprise text-h1-enterprise text-surface-white mb-8">Diagnosis and Implementation in Parallel</h2>
+<p class="font-body-intro text-cool-gray mb-12">Traditional consultants spend months and years analyzing. We operate on a two-track model where system diagnosis and core infrastructure deployment happen simultaneously.</p>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue flex items-center justify-center text-electric-blue font-bold">1</div>
+<div>
+<h4 class="font-h2-section text-xl text-surface-white mb-2">Diagnosis</h4>
+<p class="font-body-standard text-cool-gray">We analyze data sources and workflows, identify low-hanging opportunities, and prioritize AI implementation by KPIs to maximize business value and cost savings.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue flex items-center justify-center text-electric-blue font-bold">2</div>
+<div>
+<h4 class="font-h2-section text-xl text-surface-white mb-2">Data Consolidation</h4>
+<p class="font-body-standard text-cool-gray">We consolidate data sources and improve data quality, reducing manual entry, duplicates, and noise to build stronger foundation for best outcomes.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue flex items-center justify-center text-electric-blue font-bold">3</div>
+<div>
+<h4 class="font-h2-section text-xl text-surface-white mb-2">Infrastructure Staging</h4>
+<p class="font-body-standard text-cool-gray">Setting up enterprise-grade AI foundations while the strategy is finalized.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue flex items-center justify-center text-electric-blue font-bold">4</div>
+<div>
+<h4 class="font-h2-section text-xl text-surface-white mb-2">Continuous Scaling</h4>
+<p class="font-body-standard text-cool-gray">Iterative deployment of AI modules with real-time performance tracking.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-graphite rounded-2xl overflow-hidden shadow-2xl border border-outline/10">
+<img alt="Technical infrastructure" class="w-full h-full object-cover" data-alt="A clean, high-tech server room environment showing sleek, matte-black server racks with glowing cyan status indicators. The scene is photographed from a low, dramatic angle to emphasize scale and industrial strength. The lighting is cold and precise, reflecting off polished metallic surfaces. This image represents the physical backbone of an enterprise AI transformation, emphasizing stability and operational reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfL7nd5msKUY3sjZI2q5RGT_iIJCoNbE2a_wJGBxnndoP4FIcPl0QesIct8IqHvSGo3UKS0yqNbfPOiwcWZ1HEo24munVJyP4ohKUzBAqKm2GxLsswCZRM9BDDnqKQfc5q_VlBc5hwpmGiULvg2LO5tqOVqrc1WHcr-IMYjoR_j-Pt5cMpmuE8Zly_EsuVOltmUghDNbiJh1YDqrx5mGx8nU7LRF8t0z8J8QsmzgOHho4N-uwApOedSqau9qJAjbxcDowk8jx5LUlU"/>
+</div>
+<!-- Floating Glass Metric Card -->
+<div class="absolute -bottom-8 -left-8 glass-panel p-6 rounded-lg max-w-[240px] shadow-2xl">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 bg-secondary/20 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">trending_up</span>
+</div>
+<div>
+<p class="text-xs font-label-caps text-cool-gray">Uptime</p>
+<p class="text-xl font-bold text-surface-white">99.99%</p>
+</div>
+</div>
+<div class="w-full h-1.5 bg-graphite rounded-full overflow-hidden">
+<div class="w-[99%] h-full bg-secondary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="dark:bg-deep-navy border-t border-outline/10 w-full py-8">
+<div class="max-w-max-container mx-auto px-grid-gutter text-center">
+<p class="font-body-standard text-cool-gray text-sm opacity-60">© 2026 Telleqt Pte. Ltd.  All Rights Reserved</p>
+</div>
+</footer>
+</body></html>

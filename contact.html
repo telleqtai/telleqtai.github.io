@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#353436",
+                        "tertiary": "#dec29a",
+                        "on-tertiary-fixed": "#271901",
+                        "primary-container": "#0f172a",
+                        "secondary": "#7bd0ff",
+                        "tertiary-fixed": "#fcdeb5",
+                        "surface": "#131315",
+                        "inverse-on-surface": "#303032",
+                        "primary": "#bec6e0",
+                        "secondary-container": "#00a6e0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "background": "#131315",
+                        "surface-container": "#1f1f21",
+                        "outline": "#909097",
+                        "on-secondary": "#00354a",
+                        "tertiary-fixed-dim": "#dec29a",
+                        "on-primary-container": "#798098",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#004c69",
+                        "on-secondary-fixed": "#001e2c",
+                        "on-background": "#e4e2e4",
+                        "surface-bright": "#39393b",
+                        "soft-cyan": "#22D3EE",
+                        "surface-container-low": "#1b1b1d",
+                        "graphite": "#1E293B",
+                        "surface-container-lowest": "#0e0e10",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "surface-tint": "#bec6e0",
+                        "on-tertiary-container": "#957d5a",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2b",
+                        "on-surface-variant": "#c6c6cd",
+                        "inverse-primary": "#565e74",
+                        "inverse-surface": "#e4e2e4",
+                        "surface-dim": "#131315",
+                        "cool-gray": "#94A3B8",
+                        "tertiary-container": "#231500",
+                        "secondary-fixed-dim": "#7bd0ff",
+                        "surface-white": "#F8FAFC",
+                        "on-tertiary": "#3e2d11",
+                        "on-primary-fixed": "#131b2e",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e4e2e4",
+                        "primary-fixed": "#dae2fd",
+                        "surface-variant": "#353436",
+                        "electric-blue": "#0EA5E9",
+                        "secondary-fixed": "#c4e7ff",
+                        "on-secondary-container": "#00374d",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary": "#283044",
+                        "deep-navy": "#0A0F1D",
+                        "outline-variant": "#45464d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "component-padding": "24px",
+                        "max-container": "1280px",
+                        "content-gap": "80px",
+                        "section-gap": "160px",
+                        "grid-gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "h1-enterprise": ["Manrope"],
+                        "display-hero": ["Manrope"],
+                        "body-intro": ["Inter"],
+                        "h2-section": ["Manrope"],
+                        "button-text": ["Inter"],
+                        "body-standard": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "h1-enterprise": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                        "body-intro": ["20px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "h2-section": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "button-text": ["15px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body-standard": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<title>Contact | Telleqt AI Transformation</title>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<style id="telleqt-responsive-overrides">
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  .grid > *,
+  .flex > * {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  button,
+  li {
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 767px) {
+    .px-grid-gutter {
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+    }
+
+    header.fixed .px-grid-gutter,
+    nav.fixed .px-grid-gutter {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .py-section-gap {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .pt-40 {
+      padding-top: 7rem !important;
+    }
+
+    .pb-section-gap {
+      padding-bottom: 4.5rem !important;
+    }
+
+    .mb-section-gap {
+      margin-bottom: 4.5rem !important;
+    }
+
+    .gap-grid-gutter {
+      gap: 1.5rem !important;
+    }
+
+    .gap-content-gap,
+    .gap-24 {
+      gap: 2rem !important;
+    }
+
+    .p-12,
+    .p-10,
+    .p-8 {
+      padding: 1.5rem !important;
+    }
+
+    .py-24,
+    .py-20 {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .text-display-hero {
+      font-size: clamp(2.1rem, 9vw, 3rem) !important;
+      line-height: 1.12 !important;
+      letter-spacing: 0 !important;
+      overflow-wrap: anywhere;
+      hyphens: auto;
+    }
+
+    .text-h1-enterprise {
+      font-size: clamp(2rem, 8vw, 2.5rem) !important;
+      line-height: 1.18 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .text-h2-section {
+      font-size: clamp(1.5rem, 6.5vw, 2rem) !important;
+      line-height: 1.25 !important;
+    }
+
+    .text-body-intro {
+      font-size: 1.0625rem !important;
+      line-height: 1.55 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .max-w-2xl,
+    .max-w-3xl,
+    .max-w-4xl {
+      max-width: 100% !important;
+    }
+
+    main section:first-of-type .flex.flex-col.sm\:flex-row {
+      align-items: flex-start !important;
+    }
+
+    main section:first-of-type .flex.flex-col.sm\:flex-row > a,
+    main section:first-of-type .flex.flex-col.sm\:flex-row > button {
+      width: auto !important;
+      max-width: 100% !important;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .h-\[400px\],
+    .h-\[500px\] {
+      height: auto !important;
+      min-height: 20rem;
+    }
+
+    .-left-8 {
+      left: 1rem !important;
+    }
+
+    .-bottom-8 {
+      bottom: 1rem !important;
+    }
+  }
+</style>
+</head>
+<body class="bg-deep-navy text-on-background font-body-standard overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 dark:bg-deep-navy/90 backdrop-blur-xl border-b border-outline/10 shadow-sm">
+<div class="flex justify-between items-center h-20 px-grid-gutter max-w-max-container mx-auto">
+<a class="font-h2-section text-h2-section font-bold text-surface-white tracking-tight" href="index.html">Telleqt</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="index.html">Home</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="approach.html">Approach</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="ai-technologies.html">AI Expertise</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="technology.html">Own technology</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="industries.html">Industries</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="about.html">About Us</a>
+<a class="font-body-standard text-body-standard text-secondary font-semibold hover:text-secondary transition-all" href="contact.html">Contact</a>
+</div>
+<a class="bg-electric-blue text-white font-button-text text-button-text px-6 py-3 rounded hover:bg-soft-cyan transition-all scale-95 active:scale-90 transition-transform" href="contact.html">
+                Get Started
+            </a>
+</div>
+</nav>
+<!-- Hero / Content Section -->
+<main class="pt-40 pb-section-gap px-grid-gutter max-w-max-container mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter">
+<!-- Left Column: Context -->
+<div class="lg:col-span-5 flex flex-col justify-start">
+<span class="font-label-caps text-label-caps text-secondary mb-6 block">READY FOR THE FUTURE?</span>
+<h1 class="font-h1-enterprise text-h1-enterprise text-surface-white mb-8">
+                    Let’s Discuss Your AI Transformation
+                </h1>
+<p class="font-body-intro text-body-intro text-cool-gray mb-12">
+                    If your organization has already tried AI transformation and struggled to reach measurable results, it’s time for an implementation-first approach. We move past the hype to deliver industrial-strength operational intelligence.
+                </p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-graphite rounded flex items-center justify-center border border-outline/10">
+<span class="material-symbols-outlined text-secondary">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="text-surface-white font-semibold">Technical Authority</h4>
+<p class="text-cool-gray text-sm">Deep engineering expertise in industrial system architectures.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-graphite rounded flex items-center justify-center border border-outline/10">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+</div>
+<div>
+<h4 class="text-surface-white font-semibold">Operational Stability</h4>
+<p class="text-cool-gray text-sm">Focused on mission-critical uptime and secure data handling.</p>
+</div>
+</div>
+</div>
+<!-- Abstract Decorative Element -->
+<div class="mt-16 hidden lg:block">
+<div class="relative w-full h-64 bg-graphite rounded-xl overflow-hidden border border-outline/10">
+<div class="absolute inset-0 bg-gradient-to-br from-electric-blue/10 to-transparent"></div>
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="A highly technical close-up of a server rack with blue blinking LED lights in a dark data center environment. The scene is shot with a shallow depth of field, emphasizing the precision-engineered hardware. The lighting is cool-toned with electric blue accents, creating a sense of advanced operational technology and mission-critical stability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDGWxEKrFGOtVK-DSEdjAueNVdOyOGf1F_VY4aXwsiVBbKKBrRFZeRgNgJ_pHVo_wpKZS6w5DKOpXcH6oX9_hmB3KadF1h_9Vv-gWkxYgOtez1sWfyjk_cRgur8WaKAYubBvBF50-8k8yfpGCoZZCB5NHI8B5Xfwkor1Ee40sS6lVNGb8JoMbM_HtOq5YMvyUYzSkxzTLnRyXp3cKSm7KOjV3idmXIrowF2579uMYQs34BOm4Vtz4EXVBio18yiNpcekuhOeMa4s1Y"/>
+</div>
+</div>
+</div>
+<!-- Right Column: Contact Email -->
+<div class="lg:col-span-7">
+<div class="bg-graphite p-8 md:p-12 rounded-xl border border-outline/10 backdrop-blur-xl shadow-2xl min-h-[360px] flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-secondary mb-6 block">EMAIL US</span>
+<h2 class="font-h2-section text-h2-section text-surface-white mb-6">Write to Telleqt</h2>
+<p class="font-body-standard text-body-standard text-cool-gray mb-10 max-w-xl">
+                        Tell us about your stalled transformation effort, operational constraints, and the business results you want to reach with AI.
+                    </p>
+<a class="inline-flex text-surface-white font-body-intro text-body-intro hover:text-secondary transition-colors break-all" href="mailto:ai@telleqt.ai">
+                        ai@telleqt.ai
+</a>
+<div class="mt-10 pt-8 border-t border-outline/10">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">COMPANY ADDRESS</span>
+<address class="not-italic font-body-standard text-body-standard text-cool-gray leading-relaxed">
+                        Royal Group Building<br/>
+                        3 Phillip Street<br/>
+                        Singapore 048693
+                    </address>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="dark:bg-deep-navy border-t border-outline/10 w-full py-8">
+<div class="max-w-max-container mx-auto px-grid-gutter text-center">
+<p class="font-body-standard text-cool-gray text-sm opacity-60">© 2026 Telleqt Pte. Ltd.  All Rights Reserved</p>
+</div>
+</footer>
+</body></html>

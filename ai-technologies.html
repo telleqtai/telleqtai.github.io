@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#353436",
+                    "tertiary": "#dec29a",
+                    "on-tertiary-fixed": "#271901",
+                    "primary-container": "#0f172a",
+                    "secondary": "#7bd0ff",
+                    "secondary-container": "#00a6e0",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "background": "#131315",
+                    "surface-container": "#1f1f21",
+                    "outline": "#909097",
+                    "on-secondary": "#00354a",
+                    "tertiary-fixed-dim": "#dec29a",
+                    "on-primary-container": "#798098",
+                    "on-error": "#690005",
+                    "on-secondary-fixed-variant": "#004c69",
+                    "on-secondary-fixed": "#001e2c",
+                    "on-background": "#e4e2e4",
+                    "surface-bright": "#39393b",
+                    "soft-cyan": "#22D3EE",
+                    "surface-container-low": "#1b1b1d",
+                    "graphite": "#1E293B",
+                    "surface-container-lowest": "#0e0e10",
+                    "on-tertiary-fixed-variant": "#574425",
+                    "surface-tint": "#bec6e0",
+                    "on-tertiary-container": "#957d5a",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#2a2a2b",
+                    "on-surface-variant": "#c6c6cd",
+                    "inverse-primary": "#565e74",
+                    "inverse-surface": "#e4e2e4",
+                    "surface-dim": "#131315",
+                    "cool-gray": "#94A3B8",
+                    "tertiary-container": "#231500",
+                    "secondary-fixed-dim": "#7bd0ff",
+                    "surface-white": "#F8FAFC",
+                    "on-tertiary": "#3e2d11",
+                    "on-primary-fixed": "#131b2e",
+                    "error-container": "#93000a",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e4e2e4",
+                    "primary-fixed": "#dae2fd",
+                    "surface-variant": "#353436",
+                    "electric-blue": "#0EA5E9",
+                    "secondary-fixed": "#c4e7ff",
+                    "on-secondary-container": "#00374d",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary": "#283044",
+                    "deep-navy": "#0A0F1D",
+                    "outline-variant": "#45464d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "component-padding": "24px",
+                    "max-container": "1280px",
+                    "content-gap": "80px",
+                    "section-gap": "160px",
+                    "grid-gutter": "32px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "h1-enterprise": ["Manrope"],
+                    "display-hero": ["Manrope"],
+                    "body-intro": ["Inter"],
+                    "h2-section": ["Manrope"],
+                    "button-text": ["Inter"],
+                    "body-standard": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "h1-enterprise": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "body-intro": ["20px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "h2-section": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button-text": ["15px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-standard": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(123, 208, 255, 0.4);
+            background: rgba(30, 41, 59, 0.6);
+            transform: translateY(-4px);
+        }
+        .tech-gradient-text {
+            background: linear-gradient(to right, #7bd0ff, #0EA5E9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<title>AI Technologies | Telleqt AI Transformation</title>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<style id="telleqt-responsive-overrides">
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  .grid > *,
+  .flex > * {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  button,
+  li {
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 767px) {
+    .px-grid-gutter {
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+    }
+
+    header.fixed .px-grid-gutter,
+    nav.fixed .px-grid-gutter {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .py-section-gap {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .pt-40 {
+      padding-top: 7rem !important;
+    }
+
+    .pb-section-gap {
+      padding-bottom: 4.5rem !important;
+    }
+
+    .mb-section-gap {
+      margin-bottom: 4.5rem !important;
+    }
+
+    .gap-grid-gutter {
+      gap: 1.5rem !important;
+    }
+
+    .gap-content-gap,
+    .gap-24 {
+      gap: 2rem !important;
+    }
+
+    .p-12,
+    .p-10,
+    .p-8 {
+      padding: 1.5rem !important;
+    }
+
+    .py-24,
+    .py-20 {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .text-display-hero {
+      font-size: clamp(2.1rem, 9vw, 3rem) !important;
+      line-height: 1.12 !important;
+      letter-spacing: 0 !important;
+      overflow-wrap: anywhere;
+      hyphens: auto;
+    }
+
+    .text-h1-enterprise {
+      font-size: clamp(2rem, 8vw, 2.5rem) !important;
+      line-height: 1.18 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .text-h2-section {
+      font-size: clamp(1.5rem, 6.5vw, 2rem) !important;
+      line-height: 1.25 !important;
+    }
+
+    .text-body-intro {
+      font-size: 1.0625rem !important;
+      line-height: 1.55 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .max-w-2xl,
+    .max-w-3xl,
+    .max-w-4xl {
+      max-width: 100% !important;
+    }
+
+    main section:first-of-type .flex.flex-col.sm\:flex-row {
+      align-items: flex-start !important;
+    }
+
+    main section:first-of-type .flex.flex-col.sm\:flex-row > a,
+    main section:first-of-type .flex.flex-col.sm\:flex-row > button {
+      width: auto !important;
+      max-width: 100% !important;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .h-\[400px\],
+    .h-\[500px\] {
+      height: auto !important;
+      min-height: 20rem;
+    }
+
+    .-left-8 {
+      left: 1rem !important;
+    }
+
+    .-bottom-8 {
+      bottom: 1rem !important;
+    }
+  }
+</style>
+</head>
+<body class="bg-deep-navy text-on-background selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 dark:bg-deep-navy/90 backdrop-blur-xl border-b border-outline/10 shadow-sm">
+<div class="flex justify-between items-center h-20 px-grid-gutter max-w-max-container mx-auto">
+<a class="font-h2-section text-h2-section font-bold text-surface-white tracking-tight" href="index.html">Telleqt</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="index.html">Home</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="approach.html">Approach</a>
+<a class="font-body-standard text-body-standard text-secondary font-semibold" href="ai-technologies.html">AI Expertise</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="technology.html">Own technology</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="industries.html">Industries</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="about.html">About Us</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="contact.html">Contact</a>
+</div>
+<a class="bg-electric-blue text-surface-white px-6 py-3 rounded-lg font-button-text text-button-text scale-95 active:scale-90 transition-transform hover:bg-soft-cyan" href="contact.html">
+                Get Started
+            </a>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-max-container mx-auto px-grid-gutter py-24 text-center">
+<div class="mb-6 inline-block px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5">
+<span class="font-label-caps text-label-caps text-secondary">CORE CAPABILITIES</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-surface-white mb-8">AI Technologies We Work With</h1>
+<p class="font-body-intro text-body-intro text-cool-gray max-w-3xl mx-auto">
+                AI transformation is not one tool or one model. It is the orchestrated integration of industrial-grade data engineering, specialized architecture, and operational logic.
+            </p>
+</section>
+<!-- Technology Bento Grid -->
+<section class="max-w-max-container mx-auto px-grid-gutter pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Card 1: Data Consolidation (Large) -->
+<div class="glass-card p-component-padding md:col-span-2 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="database">database</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">Data Consolidation</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">We unify fragmented legacy silos into a singular, high-integrity substrate for intelligent operations.</p>
+</div>
+</div>
+<!-- Card 2: Data Engineering -->
+<div class="glass-card p-component-padding flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="engineering">engineering</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">Data Engineering</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Building the robust pipelines required to transport and transform massive enterprise datasets.</p>
+</div>
+<!-- Card 3: Real-Time Data Processing -->
+<div class="glass-card p-component-padding flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="history_toggle_off">history_toggle_off</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">Real-Time Data</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Processing streaming signals with sub-second latency for mission-critical industrial response.</p>
+</div>
+<!-- Card 4: Machine Learning -->
+<div class="glass-card p-component-padding flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="model_training">model_training</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">Machine Learning</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Deploying predictive models that identify patterns and anomalies within complex systems.</p>
+</div>
+<!-- Card 5: Computer Vision (Medium Width) -->
+<div class="glass-card p-component-padding md:col-span-2 flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">Computer Vision</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Automating visual inspection and spatial awareness for manufacturing and logistical environments.</p>
+</div>
+<!-- Card 6: Generative AI -->
+<div class="glass-card p-component-padding flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">Generative AI</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Synthesizing high-value documentation and creative assets using enterprise-tuned GenAI frameworks.</p>
+</div>
+<!-- Card 7: Large Language Models -->
+<div class="glass-card p-component-padding flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="forum">forum</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">LLMs</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Customizing proprietary language models for deep domain expertise and safe institutional knowledge retrieval.</p>
+</div>
+<!-- Card 8: AI Agents -->
+<div class="glass-card p-component-padding flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="smart_toy">smart_toy</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">AI Agents</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Developing autonomous entities capable of executing complex multi-step workflows without human intervention.</p>
+</div>
+<!-- Card 9: Automation -->
+<div class="glass-card p-component-padding flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">Automation</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Bridging AI logic with physical and digital actuators to create self-optimizing business processes.</p>
+</div>
+<!-- Card 10: MLOps -->
+<div class="glass-card p-component-padding flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="all_inclusive">all_inclusive</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">MLOps</h3>
+<p class="font-body-standard text-body-standard text-cool-gray">Managing the lifecycle of production AI to ensure continuous accuracy, safety, and performance scaling.</p>
+</div>
+<!-- Card 11: Real-Time AI Architecture (Featured) -->
+<div class="glass-card p-component-padding md:col-span-2 flex flex-col justify-center border-l-4 border-l-secondary relative overflow-hidden group">
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-h2-section text-h2-section text-surface-white mb-4">Real-Time AI Architecture</h3>
+<p class="font-body-standard text-body-standard text-cool-gray max-w-md">Designing high-availability system topologies that sustain AI intelligence across edge and cloud clusters.</p>
+</div>
+<!-- Decorative background element for the featured card -->
+<div class="absolute right-0 bottom-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -mr-20 -mb-20"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="dark:bg-deep-navy border-t border-outline/10 w-full py-8">
+<div class="max-w-max-container mx-auto px-grid-gutter text-center">
+<p class="font-body-standard text-cool-gray text-sm opacity-60">© 2026 Telleqt Pte. Ltd.  All Rights Reserved</p>
+</div>
+</footer>
+</body></html>

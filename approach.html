@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .process-line {
+            background: linear-gradient(90deg, transparent, #0EA5E9, transparent);
+            height: 1px;
+            width: 100%;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#353436",
+                        "tertiary": "#dec29a",
+                        "on-tertiary-fixed": "#271901",
+                        "primary-container": "#0f172a",
+                        "secondary": "#7bd0ff",
+                        "tertiary-fixed": "#fcdeb5",
+                        "surface": "#131315",
+                        "inverse-on-surface": "#303032",
+                        "primary": "#bec6e0",
+                        "secondary-container": "#00a6e0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "background": "#131315",
+                        "surface-container": "#1f1f21",
+                        "outline": "#909097",
+                        "on-secondary": "#00354a",
+                        "tertiary-fixed-dim": "#dec29a",
+                        "on-primary-container": "#798098",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#004c69",
+                        "on-secondary-fixed": "#001e2c",
+                        "on-background": "#e4e2e4",
+                        "surface-bright": "#39393b",
+                        "soft-cyan": "#22D3EE",
+                        "surface-container-low": "#1b1b1d",
+                        "graphite": "#1E293B",
+                        "surface-container-lowest": "#0e0e10",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "surface-tint": "#bec6e0",
+                        "on-tertiary-container": "#957d5a",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2a2a2b",
+                        "on-surface-variant": "#c6c6cd",
+                        "inverse-primary": "#565e74",
+                        "inverse-surface": "#e4e2e4",
+                        "surface-dim": "#131315",
+                        "cool-gray": "#94A3B8",
+                        "tertiary-container": "#231500",
+                        "secondary-fixed-dim": "#7bd0ff",
+                        "surface-white": "#F8FAFC",
+                        "on-tertiary": "#3e2d11",
+                        "on-primary-fixed": "#131b2e",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e4e2e4",
+                        "primary-fixed": "#dae2fd",
+                        "surface-variant": "#353436",
+                        "electric-blue": "#0EA5E9",
+                        "secondary-fixed": "#c4e7ff",
+                        "on-secondary-container": "#00374d",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary": "#283044",
+                        "deep-navy": "#0A0F1D",
+                        "outline-variant": "#45464d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "component-padding": "24px",
+                        "max-container": "1280px",
+                        "content-gap": "80px",
+                        "section-gap": "160px",
+                        "grid-gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "h1-enterprise": ["Manrope"],
+                        "display-hero": ["Manrope"],
+                        "body-intro": ["Inter"],
+                        "h2-section": ["Manrope"],
+                        "button-text": ["Inter"],
+                        "body-standard": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "h1-enterprise": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                        "body-intro": ["20px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "h2-section": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "button-text": ["15px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body-standard": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<title>Approach | Telleqt AI Transformation</title>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<style id="telleqt-responsive-overrides">
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  .grid > *,
+  .flex > * {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  button,
+  li {
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 767px) {
+    .px-grid-gutter {
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+    }
+
+    header.fixed .px-grid-gutter,
+    nav.fixed .px-grid-gutter {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .py-section-gap {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .pt-40 {
+      padding-top: 7rem !important;
+    }
+
+    .pb-section-gap {
+      padding-bottom: 4.5rem !important;
+    }
+
+    .mb-section-gap {
+      margin-bottom: 4.5rem !important;
+    }
+
+    .gap-grid-gutter {
+      gap: 1.5rem !important;
+    }
+
+    .gap-content-gap,
+    .gap-24 {
+      gap: 2rem !important;
+    }
+
+    .p-12,
+    .p-10,
+    .p-8 {
+      padding: 1.5rem !important;
+    }
+
+    .py-24,
+    .py-20 {
+      padding-top: 4.5rem !important;
+      padding-bottom: 4.5rem !important;
+    }
+
+    .text-display-hero {
+      font-size: clamp(2.1rem, 9vw, 3rem) !important;
+      line-height: 1.12 !important;
+      letter-spacing: 0 !important;
+      overflow-wrap: anywhere;
+      hyphens: auto;
+    }
+
+    .text-h1-enterprise {
+      font-size: clamp(2rem, 8vw, 2.5rem) !important;
+      line-height: 1.18 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .text-h2-section {
+      font-size: clamp(1.5rem, 6.5vw, 2rem) !important;
+      line-height: 1.25 !important;
+    }
+
+    .text-body-intro {
+      font-size: 1.0625rem !important;
+      line-height: 1.55 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .max-w-2xl,
+    .max-w-3xl,
+    .max-w-4xl {
+      max-width: 100% !important;
+    }
+
+    main section:first-of-type .flex.flex-col.sm\:flex-row {
+      align-items: flex-start !important;
+    }
+
+    main section:first-of-type .flex.flex-col.sm\:flex-row > a,
+    main section:first-of-type .flex.flex-col.sm\:flex-row > button {
+      width: auto !important;
+      max-width: 100% !important;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .h-\[400px\],
+    .h-\[500px\] {
+      height: auto !important;
+      min-height: 20rem;
+    }
+
+    .-left-8 {
+      left: 1rem !important;
+    }
+
+    .-bottom-8 {
+      bottom: 1rem !important;
+    }
+  }
+</style>
+</head>
+<body class="bg-deep-navy text-on-background font-body-standard selection:bg-electric-blue/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 dark:bg-deep-navy/90 backdrop-blur-xl border-b border-outline/10 shadow-sm h-20">
+<div class="flex justify-between items-center h-full px-grid-gutter max-w-max-container mx-auto">
+<a class="font-h2-section text-h2-section font-bold text-surface-white tracking-tight" href="index.html">Telleqt</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-cool-gray hover:text-surface-white transition-colors duration-200 font-body-standard text-body-standard" href="index.html">Home</a>
+<a class="text-secondary font-semibold font-body-standard text-body-standard" href="approach.html">Approach</a>
+<a class="text-cool-gray hover:text-surface-white transition-colors duration-200 font-body-standard text-body-standard" href="ai-technologies.html">AI Expertise</a>
+<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="technology.html">Own technology</a>
+<a class="text-cool-gray hover:text-surface-white transition-colors duration-200 font-body-standard text-body-standard" href="industries.html">Industries</a>
+<a class="text-cool-gray hover:text-surface-white transition-colors duration-200 font-body-standard text-body-standard" href="about.html">About Us</a>
+<a class="text-cool-gray hover:text-surface-white transition-colors duration-200 font-body-standard text-body-standard" href="contact.html">Contact</a>
+<a class="bg-electric-blue text-surface-white px-6 py-2 rounded-DEFAULT font-button-text text-button-text scale-95 active:scale-90 transition-transform" href="contact.html">Get Started</a>
+</div>
+<button class="md:hidden text-surface-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="py-section-gap max-w-max-container mx-auto px-grid-gutter text-center">
+<div class="inline-block px-4 py-1 mb-8 border border-electric-blue/30 rounded-full bg-electric-blue/5">
+<span class="font-label-caps text-label-caps text-secondary">The Telleqt Methodology</span>
+</div>
+<h1 class="font-h1-enterprise text-h1-enterprise text-surface-white mb-6">A Practical Approach to AI Transformation</h1>
+<p class="font-body-intro text-body-intro text-cool-gray max-w-3xl mx-auto">
+                Telleqt combines diagnosis, prioritization, and early implementation to move beyond theoretical models and deliver operational results at scale.
+            </p>
+</section>
+<!-- Process Diagram Section -->
+<section class="pb-section-gap max-w-max-container mx-auto px-grid-gutter overflow-hidden">
+<div class="relative flex flex-col md:flex-row justify-between items-start md:items-center gap-12 md:gap-4 py-12">
+<!-- Decorative animated path line -->
+<div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-electric-blue/40 to-transparent hidden md:block"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/5 group">
+<div class="w-16 h-16 rounded-lg bg-graphite border border-outline/20 flex items-center justify-center mb-6 group-hover:border-electric-blue transition-colors">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 0;">biotech</span>
+</div>
+<h3 class="font-h2-section text-xl text-surface-white mb-2">Diagnose</h3>
+<p class="font-body-standard text-sm text-cool-gray">Identifying operational bottlenecks and data readiness.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/5 group">
+<div class="w-16 h-16 rounded-lg bg-graphite border border-outline/20 flex items-center justify-center mb-6 group-hover:border-electric-blue transition-colors">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 0;">priority_high</span>
+</div>
+<h3 class="font-h2-section text-xl text-surface-white mb-2">Prioritize</h3>
+<p class="font-body-standard text-sm text-cool-gray">Ranking opportunities by ROI and implementation speed.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/5 group">
+<div class="w-20 h-20 rounded-lg bg-electric-blue flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(14,165,233,0.3)]">
+<span class="material-symbols-outlined text-surface-white scale-125" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+<h3 class="font-h2-section text-xl text-secondary mb-2 font-bold">Implement Early</h3>
+<p class="font-body-standard text-sm text-cool-gray">Rapid prototyping and integration into existing workflows.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/5 group">
+<div class="w-16 h-16 rounded-lg bg-graphite border border-outline/20 flex items-center justify-center mb-6 group-hover:border-electric-blue transition-colors">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 0;">verified</span>
+</div>
+<h3 class="font-h2-section text-xl text-surface-white mb-2">Prove Value</h3>
+<p class="font-body-standard text-sm text-cool-gray">Quantifying impact through rigorous data analysis.</p>
+</div>
+<!-- Step 5 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/5 group">
+<div class="w-16 h-16 rounded-lg bg-graphite border border-outline/20 flex items-center justify-center mb-6 group-hover:border-electric-blue transition-colors">
+<span class="material-symbols-outlined text-electric-blue" style="font-variation-settings: 'FILL' 0;">architecture</span>
+</div>
+<h3 class="font-h2-section text-xl text-surface-white mb-2">Scale</h3>
+<p class="font-body-standard text-sm text-cool-gray">Extending the solution across the entire enterprise.</p>
+</div>
+</div>
+</section>
+<!-- Comparison Section -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="max-w-max-container mx-auto px-grid-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-grid-gutter items-center">
+<div>
+<h2 class="font-h2-section text-h2-section text-surface-white mb-8">Implementation-First vs. Traditional Consulting</h2>
+<p class="font-body-standard text-cool-gray mb-12 max-w-xl">
+                            Traditional firms spend months on strategy decks that collect dust. We believe the only way to truly understand a system is to start building within it.
+                        </p>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue">speed</span>
+</div>
+<div>
+<h4 class="font-h2-section text-lg text-surface-white mb-2">Reduced Time-to-Value</h4>
+<p class="font-body-standard text-cool-gray">We target operational wins in weeks, not years, ensuring the project maintains executive momentum.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue">settings_suggest</span>
+</div>
+<div>
+<h4 class="font-h2-section text-lg text-surface-white mb-2">Real-World Implementation</h4>
+<p class="font-body-standard text-cool-gray">Our senior engineers work directly with your existing technical stack to ensure seamless integration.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-lg">
+<div class="space-y-6">
+<div class="flex justify-between items-center pb-4 border-b border-outline/10">
+<span class="font-label-caps text-cool-gray">Traditional Flow</span>
+<span class="text-xs text-error">Low Velocity</span>
+</div>
+<div class="flex items-center gap-4 text-cool-gray opacity-50">
+<span class="text-sm font-semibold">1. Strategy Definition (6 months)</span>
+</div>
+<div class="flex items-center gap-4 text-cool-gray opacity-50">
+<span class="text-sm font-semibold">2. Vendor Selection (3 months)</span>
+</div>
+<div class="bg-electric-blue/10 border border-electric-blue/40 p-6 rounded">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-secondary">Telleqt Velocity</span>
+<span class="text-xs text-secondary font-bold">High Velocity</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm">check_circle</span>
+<span class="text-sm text-surface-white font-semibold">Diagnosis (Week 2)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm">check_circle</span>
+<span class="text-sm text-surface-white font-semibold">Pilot Deployment (Week 4)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-blue text-sm">check_circle</span>
+<span class="text-sm text-surface-white font-semibold">Value Validation (Week 8)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Insights -->
+<section class="py-section-gap max-w-max-container mx-auto px-grid-gutter">
+<h2 class="font-h2-section text-h2-section text-surface-white mb-16 text-center">Core Pillars of Implementation</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 glass-card p-10 rounded-xl group relative overflow-hidden">
+<div class="relative z-10">
+<span class="font-label-caps text-secondary mb-4 block">Engineered Stability</span>
+<h3 class="font-h1-enterprise text-3xl text-surface-white mb-4">Industrial-Strength Reliability</h3>
+<p class="font-body-standard text-cool-gray max-w-lg">
+                            We don't build "wrappers." We build resilient system architectures that treat AI as a core infrastructure component, ensuring enterprise-grade uptime and security.
+                        </p>
+</div>
+<div class="absolute bottom-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<img alt="Technical Architecture" class="w-full h-full object-cover grayscale" data-alt="A macro view of a futuristic server circuit board with glowing blue micro-processors and fiber-optic data lines. The lighting is low-key with sharp cyan highlights, creating a sense of advanced industrial technology. The composition is sleek and technical, emphasizing precision and high-performance computing power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkNkLyrJ5a5qwY1HfE5JYcnHxvGeARggoUmv9op3H__ouj0sDXTBxc6clFOR0ir7IA-waHkkfZc6Ur2iAlaqMDYmt6qAmq9ZxLOc4yXiX-mWjDWOdYAxEJoYziWskIGj70QV36VTvQsg27d5bYuIAPJLz2VrL-nvEZYa7SJheuSsIBt2dmK5BJAFQf27bWbYbAny_L3h82CVCGzzt4vf-tjhfVeLHbyBUVr2nd8hxK5l8h2aVNoVWmFyfb3-wwhsM9EhzCuK7zosl3"/>
+</div>
+</div>
+<div class="glass-card p-10 rounded-xl hover:border-electric-blue/40 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-electric-blue mb-6">lock_open</span>
+<h3 class="font-h2-section text-xl text-surface-white mb-4">Vendor Agnostic</h3>
+<p class="font-body-standard text-cool-gray">
+                        We leverage the best LLMs and machine learning frameworks for your specific use case, avoiding vendor lock-in.
+                    </p>
+</div>
+<div class="glass-card p-10 rounded-xl hover:border-electric-blue/40 transition-all duration-300">
+<span class="material-symbols-outlined text-4xl text-electric-blue mb-6">database</span>
+<h3 class="font-h2-section text-xl text-surface-white mb-4">Data Integrity</h3>
+<p class="font-body-standard text-cool-gray">
+                        Rigorous cleaning and structuring of proprietary data to ensure your AI models are fueled by truth, not noise.
+                    </p>
+</div>
+<div class="md:col-span-2 glass-card p-10 rounded-xl group overflow-hidden flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-secondary mb-4 block">Strategic Alignment</span>
+<h3 class="font-h1-enterprise text-3xl text-surface-white mb-4">Operational Embedding</h3>
+<p class="font-body-standard text-cool-gray">
+                            AI is only useful if it's used. We focus on UX and change management to ensure your team adopts the new technology seamlessly into their daily workflows.
+                        </p>
+</div>
+<div class="mt-8 flex gap-2">
+<div class="h-1 bg-electric-blue flex-grow rounded-full"></div>
+<div class="h-1 bg-electric-blue/20 flex-grow rounded-full"></div>
+<div class="h-1 bg-electric-blue/20 flex-grow rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Advantages Section -->
+<section class="py-section-gap max-w-max-container mx-auto px-grid-gutter">
+<div class="mb-16 text-center max-w-3xl mx-auto">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block uppercase">Working with Telleqt</span>
+<h2 class="font-h2-section text-h2-section text-surface-white mb-4">Advantages of Our Approach</h2>
+<p class="font-body-standard text-cool-gray">Practical implementation, measurable progress, and architecture that supports transformation without disrupting operations.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-grid-gutter">
+<div class="lg:col-span-3 glass-card p-10 rounded-xl text-center hover:border-electric-blue/40 transition-all duration-300">
+<div class="w-20 h-20 mx-auto mb-8 rounded-xl bg-electric-blue/10 border border-electric-blue/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue text-5xl">verified_user</span>
+</div>
+<h3 class="font-h2-section text-2xl text-surface-white mb-4 uppercase">No “Big-Bang” Risk</h3>
+<p class="font-body-standard text-cool-gray max-w-sm mx-auto">Incremental rollout with measurable results</p>
+</div>
+<div class="lg:col-span-3 glass-card p-10 rounded-xl text-center hover:border-secondary/40 transition-all duration-300">
+<div class="w-20 h-20 mx-auto mb-8 rounded-xl bg-secondary/10 border border-secondary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-5xl">trending_up</span>
+</div>
+<h3 class="font-h2-section text-2xl text-surface-white mb-4 uppercase">Immediate Business Value</h3>
+<p class="font-body-standard text-cool-gray max-w-sm mx-auto">Faster planning, better utilization, less waste</p>
+</div>
+<div class="lg:col-span-2 glass-card p-10 rounded-xl text-center hover:border-electric-blue/40 transition-all duration-300">
+<div class="w-16 h-16 mx-auto mb-8 rounded-xl bg-electric-blue/10 border border-electric-blue/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue text-4xl">psychology</span>
+</div>
+<h3 class="font-h2-section text-xl text-surface-white mb-4 uppercase">AI That Actually Works</h3>
+<p class="font-body-standard text-cool-gray">AI operates on real-time data and drives action</p>
+</div>
+<div class="lg:col-span-2 glass-card p-10 rounded-xl text-center hover:border-electric-blue/40 transition-all duration-300">
+<div class="w-16 h-16 mx-auto mb-8 rounded-xl bg-electric-blue/10 border border-electric-blue/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-blue text-4xl">cloud_done</span>
+</div>
+<h3 class="font-h2-section text-xl text-surface-white mb-4 uppercase">Future-Proof Architecture</h3>
+<p class="font-body-standard text-cool-gray">Scalable, extensible, and decoupled from legacy constraints</p>
+</div>
+<div class="lg:col-span-2 glass-card p-10 rounded-xl text-center hover:border-secondary/40 transition-all duration-300">
+<div class="w-16 h-16 mx-auto mb-8 rounded-xl bg-secondary/10 border border-secondary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">sync</span>
+</div>
+<h3 class="font-h2-section text-xl text-surface-white mb-4 uppercase">Smooth Legacy Transition</h3>
+<p class="font-body-standard text-cool-gray">Legacy is gradually absorbed without operational disruption</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="dark:bg-deep-navy border-t border-outline/10 w-full py-8">
+<div class="max-w-max-container mx-auto px-grid-gutter text-center">
+<p class="font-body-standard text-cool-gray text-sm opacity-60">© 2026 Telleqt Pte. Ltd.  All Rights Reserved</p>
+</div>
+</footer>
+</body></html>
