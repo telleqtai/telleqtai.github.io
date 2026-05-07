@@ -15,6 +15,10 @@
 # production
 /build
 
+# generated/static source
+stitch/
+build-static-site.mjs
+
 # misc
 .DS_Store
 *.pem
