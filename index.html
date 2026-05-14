@@ -222,6 +222,45 @@
   }
 
   @media (max-width: 767px) {
+    main section:first-of-type {
+      min-height: auto !important;
+      background: #020617;
+    }
+
+    main section:first-of-type .hero-visual {
+      opacity: 0.76 !important;
+    }
+
+    main section:first-of-type .hero-bg-image {
+      filter: saturate(1.08) contrast(1.04) brightness(0.86) !important;
+    }
+
+    main section:first-of-type .hero-scanline,
+    main section:first-of-type .hero-visual::before,
+    main section:first-of-type .hero-visual::after {
+      opacity: 0.18 !important;
+    }
+
+    main section:first-of-type .hero-visual + .max-w-max-container::before {
+      content: "";
+      position: absolute;
+      inset: -1.5rem 0;
+      z-index: -1;
+      border-radius: 1.25rem;
+      background: linear-gradient(180deg, rgba(2, 6, 23, 0.78), rgba(2, 6, 23, 0.58));
+      box-shadow: 0 24px 80px rgba(2, 6, 23, 0.46);
+    }
+
+    main section:first-of-type h1,
+    main section:first-of-type p,
+    main section:first-of-type span {
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
+    }
+
+    main section:first-of-type p {
+      color: #E2E8F0 !important;
+    }
+
     .px-grid-gutter {
       padding-left: 1.25rem !important;
       padding-right: 1.25rem !important;
@@ -348,9 +387,24 @@
 <a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="about.html">About Us</a>
 <a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="contact.html">Contact</a>
 </nav>
-<a class="bg-electric-blue text-white px-6 py-3 rounded-lg font-button-text text-button-text scale-95 active:scale-90 transition-transform hover:bg-soft-cyan" href="contact.html">
+<a class="hidden md:inline-flex bg-electric-blue text-white px-6 py-3 rounded-lg font-button-text text-button-text scale-95 active:scale-90 transition-transform hover:bg-soft-cyan" href="contact.html">
                 Get Started
             </a>
+<details class="relative md:hidden z-50">
+<summary aria-label="Open navigation menu" class="list-none w-11 h-11 rounded-lg border border-outline/20 bg-graphite/60 text-surface-white flex items-center justify-center cursor-pointer [&::-webkit-details-marker]:hidden">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</summary>
+<div class="absolute right-0 top-14 w-64 rounded-xl border border-outline/10 bg-deep-navy/95 backdrop-blur-xl shadow-2xl shadow-black/30 p-3">
+<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="index.html">Home</a>
+<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="approach.html">Approach</a>
+<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="ai-technologies.html">AI Expertise</a>
+<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="technology.html">Own technology</a>
+<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="industries.html">Industries</a>
+<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="about.html">About Us</a>
+<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="contact.html">Contact</a>
+<a class="mt-3 flex items-center justify-center rounded-lg bg-electric-blue px-4 py-3 font-button-text text-button-text text-white hover:bg-soft-cyan transition-colors" href="contact.html">Get Started</a>
+</div>
+</details>
 </div>
 </header>
 <main>
@@ -364,7 +418,7 @@
 <div class="max-w-max-container mx-auto px-grid-gutter relative z-10">
 <div class="max-w-3xl">
 <span class="inline-block font-label-caps text-label-caps text-secondary mb-6 tracking-[0.2em] uppercase">Enterprise AI Recovery</span>
-<h1 class="font-display-hero text-display-hero text-surface-white mb-8">Turning Struggling Digital Transformations Into AI Success</h1>
+<h1 class="font-display-hero text-display-hero text-surface-white mb-8">Turning Challenging Digital Transformations Into AI Success</h1>
 <p class="font-body-intro text-body-intro text-cool-gray mb-12">Telleqt helps companies turn failed transformation efforts into practical AI-driven results, focused on cost savings, automation, and measurable operational impact</p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a class="bg-electric-blue text-white px-8 py-4 rounded-lg font-button-text text-button-text transition-all hover:bg-soft-cyan" href="approach.html">Explore Our Approach</a>
