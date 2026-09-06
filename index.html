@@ -102,478 +102,125 @@
         },
       }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-        }
-        .hero-visual {
-            opacity: 0.78;
-        }
-        .hero-visual::before,
-        .hero-visual::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-        }
-        .hero-visual::before {
-            z-index: 2;
-            opacity: 0.42;
-            background-image:
-                linear-gradient(rgba(123, 208, 255, 0.34) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(123, 208, 255, 0.24) 1px, transparent 1px);
-            background-size: 72px 72px;
-            mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
-            animation: heroGridDrift 13s linear infinite;
-        }
-        .hero-visual::after {
-            z-index: 5;
-            opacity: 0.62;
-            background:
-                radial-gradient(circle at 18% 34%, rgba(34, 211, 238, 0.36), transparent 26%),
-                linear-gradient(115deg, transparent 12%, rgba(123, 208, 255, 0.34) 48%, transparent 76%);
-            mix-blend-mode: screen;
-            transform: translateX(-18%);
-            animation: heroLightSweep 8s ease-in-out infinite;
-        }
-        .hero-bg-image {
-            transform: scale(1.045);
-            filter: saturate(1.18) contrast(1.12);
-            animation: heroImageDrift 18s ease-in-out infinite alternate;
-            will-change: transform;
-        }
-        .hero-scanline {
-            position: absolute;
-            inset: 0;
-            z-index: 4;
-            opacity: 0.16;
-            background: repeating-linear-gradient(
-                to bottom,
-                transparent 0,
-                transparent 9px,
-                rgba(123, 208, 255, 0.42) 10px,
-                transparent 11px
-            );
-            animation: heroScanline 5s linear infinite;
-        }
-        @keyframes heroImageDrift {
-            0% { transform: scale(1.045) translate3d(-1.4%, -1.1%, 0); }
-            100% { transform: scale(1.095) translate3d(1.6%, 1.1%, 0); }
-        }
-        @keyframes heroGridDrift {
-            0% { background-position: 0 0, 0 0; }
-            100% { background-position: 72px 72px, 72px 72px; }
-        }
-        @keyframes heroLightSweep {
-            0%, 100% { transform: translateX(-26%); opacity: 0.32; }
-            50% { transform: translateX(24%); opacity: 0.72; }
-        }
-        @keyframes heroScanline {
-            0% { background-position-y: 0; }
-            100% { background-position-y: 96px; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .hero-bg-image,
-            .hero-scanline,
-            .hero-visual::before,
-            .hero-visual::after {
-                animation: none;
-            }
-        }
-    </style>
-<title>Telleqt | AI Transformation</title>
+
+<title>Telleqt | Get Your AI Transformation Back on Track</title>
+<meta name="description" content="Stuck with SAP, ERP, or stalled AI pilots? Telleqt connects your data and delivers practical AI, targeting measurable results in 8–12 weeks."/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<style id="telleqt-responsive-overrides">
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
 
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  img,
-  svg,
-  video,
-  canvas {
-    max-width: 100%;
-  }
-
-  .grid > *,
-  .flex > * {
-    min-width: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  p,
-  a,
-  button,
-  li {
-    overflow-wrap: break-word;
-  }
-
-  @media (max-width: 767px) {
-    main section:first-of-type {
-      min-height: auto !important;
-      background: #020617;
-    }
-
-    main section:first-of-type .hero-visual {
-      opacity: 0.76 !important;
-    }
-
-    main section:first-of-type .hero-bg-image {
-      filter: saturate(1.08) contrast(1.04) brightness(0.86) !important;
-    }
-
-    main section:first-of-type .hero-scanline,
-    main section:first-of-type .hero-visual::before,
-    main section:first-of-type .hero-visual::after {
-      opacity: 0.18 !important;
-    }
-
-    main section:first-of-type .hero-visual + .max-w-max-container::before {
-      content: "";
-      position: absolute;
-      inset: -1.5rem 0;
-      z-index: -1;
-      border-radius: 1.25rem;
-      background: linear-gradient(180deg, rgba(2, 6, 23, 0.78), rgba(2, 6, 23, 0.58));
-      box-shadow: 0 24px 80px rgba(2, 6, 23, 0.46);
-    }
-
-    main section:first-of-type h1,
-    main section:first-of-type p,
-    main section:first-of-type span {
-      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9);
-    }
-
-    main section:first-of-type p {
-      color: #E2E8F0 !important;
-    }
-
-    .px-grid-gutter {
-      padding-left: 1.25rem !important;
-      padding-right: 1.25rem !important;
-    }
-
-    header.fixed .px-grid-gutter,
-    nav.fixed .px-grid-gutter {
-      padding-left: 1rem !important;
-      padding-right: 1rem !important;
-    }
-
-    .py-section-gap {
-      padding-top: 4.5rem !important;
-      padding-bottom: 4.5rem !important;
-    }
-
-    .pt-40 {
-      padding-top: 7rem !important;
-    }
-
-    .pb-section-gap {
-      padding-bottom: 4.5rem !important;
-    }
-
-    .mb-section-gap {
-      margin-bottom: 4.5rem !important;
-    }
-
-    .gap-grid-gutter {
-      gap: 1.5rem !important;
-    }
-
-    .gap-content-gap,
-    .gap-24 {
-      gap: 2rem !important;
-    }
-
-    .p-12,
-    .p-10,
-    .p-8 {
-      padding: 1.5rem !important;
-    }
-
-    .py-24,
-    .py-20 {
-      padding-top: 4.5rem !important;
-      padding-bottom: 4.5rem !important;
-    }
-
-    .text-display-hero {
-      font-size: clamp(2.1rem, 9vw, 3rem) !important;
-      line-height: 1.12 !important;
-      letter-spacing: 0 !important;
-      overflow-wrap: anywhere;
-      hyphens: auto;
-    }
-
-    .text-h1-enterprise {
-      font-size: clamp(2rem, 8vw, 2.5rem) !important;
-      line-height: 1.18 !important;
-      letter-spacing: 0 !important;
-    }
-
-    .text-h2-section {
-      font-size: clamp(1.5rem, 6.5vw, 2rem) !important;
-      line-height: 1.25 !important;
-    }
-
-    .text-body-intro {
-      font-size: 1.0625rem !important;
-      line-height: 1.55 !important;
-      letter-spacing: 0 !important;
-    }
-
-    .max-w-2xl,
-    .max-w-3xl,
-    .max-w-4xl {
-      max-width: 100% !important;
-    }
-
-    main section:first-of-type .flex.flex-col.sm\:flex-row {
-      align-items: flex-start !important;
-    }
-
-    main section:first-of-type .flex.flex-col.sm\:flex-row > a,
-    main section:first-of-type .flex.flex-col.sm\:flex-row > button {
-      width: auto !important;
-      max-width: 100% !important;
-      display: inline-flex !important;
-      align-items: center;
-      justify-content: center;
-      align-self: flex-start;
-      text-align: center;
-      white-space: normal;
-    }
-
-    .h-\[400px\],
-    .h-\[500px\] {
-      height: auto !important;
-      min-height: 20rem;
-    }
-
-    .-left-8 {
-      left: 1rem !important;
-    }
-
-    .-bottom-8 {
-      bottom: 1rem !important;
-    }
-  }
-</style>
+<link rel="stylesheet" href="site.css"/>
+<script src="site.js" defer></script>
 </head>
 <body class="bg-deep-navy text-on-background selection:bg-electric-blue selection:text-white">
-<!-- TopNavBar Shell -->
-<header class="fixed top-0 w-full z-50 dark:bg-deep-navy/90 backdrop-blur-xl border-b border-outline/10 shadow-sm">
-<div class="flex justify-between items-center h-20 px-grid-gutter max-w-max-container mx-auto">
-<a class="font-h2-section text-h2-section font-bold text-surface-white tracking-tight" href="index.html">Telleqt</a>
-<nav class="hidden md:flex items-center gap-8">
-<a class="font-body-standard text-body-standard text-secondary font-semibold transition-colors duration-200" href="index.html">Home</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="approach.html">Approach</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="ai-technologies.html">AI Expertise</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="technology.html">Own technology</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="industries.html">Industries</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="about.html">About Us</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="contact.html">Contact</a>
-</nav>
-<a class="hidden md:inline-flex bg-electric-blue text-white px-6 py-3 rounded-lg font-button-text text-button-text scale-95 active:scale-90 transition-transform hover:bg-soft-cyan" href="contact.html">
-                Get Started
-            </a>
-<details class="relative md:hidden z-50">
-<summary aria-label="Open navigation menu" class="list-none w-11 h-11 rounded-lg border border-outline/20 bg-graphite/60 text-surface-white flex items-center justify-center cursor-pointer [&::-webkit-details-marker]:hidden">
-<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
-</summary>
-<div class="absolute right-0 top-14 w-64 rounded-xl border border-outline/10 bg-deep-navy/95 backdrop-blur-xl shadow-2xl shadow-black/30 p-3">
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="index.html">Home</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="approach.html">Approach</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="ai-technologies.html">AI Expertise</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="technology.html">Own technology</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="industries.html">Industries</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="about.html">About Us</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="contact.html">Contact</a>
-<a class="mt-3 flex items-center justify-center rounded-lg bg-electric-blue px-4 py-3 font-button-text text-button-text text-white hover:bg-soft-cyan transition-colors" href="contact.html">Get Started</a>
-</div>
-</details>
-</div>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="index.html" aria-label="Telleqt home">Telleqt</a>
+    <div class="desktop-links"><a href="index.html" aria-current="page">Home</a>
+<a href="approach.html">Approach</a>
+<a href="ai-technologies.html">AI Expertise</a>
+<a href="technology.html">Own technology</a>
+<a href="industries.html">Industries</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a></div>
+    <a class="nav-cta" href="contact.html">Get Started</a>
+    <details class="mobile-menu">
+      <summary aria-label="Navigation menu"><span class="material-symbols-outlined" aria-hidden="true">menu</span></summary>
+      <div class="mobile-links"><a href="index.html" aria-current="page">Home</a>
+<a href="approach.html">Approach</a>
+<a href="ai-technologies.html">AI Expertise</a>
+<a href="technology.html">Own technology</a>
+<a href="industries.html">Industries</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Get Started</a></div>
+    </details>
+  </nav>
 </header>
-<main>
-<!-- Hero Section -->
-<section class="relative pt-40 pb-section-gap overflow-hidden">
-<div class="hero-visual absolute inset-0 z-0 overflow-hidden">
-<img alt="Abstract data flow" class="hero-bg-image w-full h-full object-cover" data-alt="A sophisticated digital visualization of complex real-time data flows, featuring glowing blue and cyan particles forming structured network grids. The background is a deep, immersive navy black, creating a sense of infinite depth. The lighting is focused on sharp, luminous lines that suggest high-speed algorithmic processing and enterprise-level technical precision. The aesthetic is professional, architectural, and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtXjZpWYYbH-apMrlXeFeoy18vx_wP7Xx2d_QHEYW8eqNbpjKJq6sK1Bd1EBNVJ1pBTorsRkR44gzSztMecbQPABQNvuqL4Z3cFVPwmt0_EG2LPDyDQoKbmlZHzazE32zc7RrGzt2g_Fce3izy_fhJBojfm8kz-MUNSWVHf7vCrJgTjW1zGNDcr1rZThuq0Rzzf9wm8nM3-EEqQjKfagT3yxasacCeUkvNMnG58FyEhYrKtMGE7XZdrypc6FPjTB8hIfaBLsc6UhD5"/>
-<div class="hero-scanline"></div>
-<div class="absolute inset-0 z-[7] bg-gradient-to-b from-deep-navy via-deep-navy/20 to-deep-navy"></div>
-</div>
-<div class="max-w-max-container mx-auto px-grid-gutter relative z-10">
-<div class="max-w-3xl">
-<span class="inline-block font-label-caps text-label-caps text-secondary mb-6 tracking-[0.2em] uppercase">Enterprise AI Recovery</span>
-<h1 class="font-display-hero text-display-hero text-surface-white mb-8">Turning Challenging Digital Transformations Into AI Success</h1>
-<p class="font-body-intro text-body-intro text-cool-gray mb-12">Telleqt helps companies turn failed transformation efforts into practical AI-driven results, focused on cost savings, automation, and measurable operational impact</p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-electric-blue text-white px-8 py-4 rounded-lg font-button-text text-button-text transition-all hover:bg-soft-cyan" href="approach.html">Explore Our Approach</a>
-<a class="border border-cool-gray text-surface-white px-8 py-4 rounded-lg font-button-text text-button-text transition-all hover:bg-graphite" href="contact.html">Contact Us</a>
-</div>
-</div>
-</div>
+<main id="main-content">
+<section class="home-hero">
+  <div class="home-hero-media" aria-hidden="true"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtXjZpWYYbH-apMrlXeFeoy18vx_wP7Xx2d_QHEYW8eqNbpjKJq6sK1Bd1EBNVJ1pBTorsRkR44gzSztMecbQPABQNvuqL4Z3cFVPwmt0_EG2LPDyDQoKbmlZHzazE32zc7RrGzt2g_Fce3izy_fhJBojfm8kz-MUNSWVHf7vCrJgTjW1zGNDcr1rZThuq0Rzzf9wm8nM3-EEqQjKfagT3yxasacCeUkvNMnG58FyEhYrKtMGE7XZdrypc6FPjTB8hIfaBLsc6UhD5" alt="" fetchpriority="high"/></div>
+  <canvas class="signal-canvas" aria-hidden="true"></canvas>
+  <div class="home-wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Telleqt / Enterprise AI transformation</span>
+      <h1>AI transformation.<span>Back on track.</span></h1>
+      <p>Stalled SAP, ERP, or AI initiative? Our engineers connect your data and deliver a focused AI use case with measurable business impact.</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="contact.html">Discuss your bottleneck<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        <a class="secondary-link" href="approach.html">Our approach</a>
+      </div>
+      <div class="hero-note"><span class="material-symbols-outlined" aria-hidden="true">deployed_code</span>Senior engineers. Your systems. Working solutions.</div>
+    </div>
+  </div>
 </section>
-<!-- Logo Strip -->
-<section class="py-20 bg-surface-container-lowest border-y border-outline/5">
-<div class="max-w-max-container mx-auto px-grid-gutter">
-<p class="text-center font-label-caps text-label-caps text-cool-gray mb-12 uppercase">Our Team Has Helped</p>
-<div class="flex flex-wrap justify-center items-center gap-x-20 gap-y-10">
-<img alt="Globe Telecom" class="h-16 max-w-[240px] object-contain brightness-0 invert" src="logos/Globe_Telecom_logo.svg"/>
-<img alt="iTail" class="h-24 max-w-[220px] object-contain" src="logos/iTail_logo.png"/>
-<img alt="Telenor" class="h-16 max-w-[240px] object-contain brightness-0 invert" src="logos/Telenor_Logo.svg"/>
-<img alt="Ericsson" class="h-20 max-w-[180px] object-contain" src="logos/Ercisson_logo.png"/>
-<img alt="Smart Communications" class="h-16 max-w-[220px] object-contain" src="logos/Smart_logo.png"/>
-</div>
-</div>
+
+<section class="recovery-band">
+  <div class="home-wrap recovery-layout">
+    <div><span class="eyebrow">A practical way forward</span><h2>Stuck with SAP, ERP,<br/>or another AI pilot?</h2></div>
+    <p>We work with the systems you already have, uncover lost value, and put AI into operation. <strong>Our target: your first measurable results in 8–12 weeks.</strong></p>
+  </div>
 </section>
-<!-- Why Telleqt Bento Grid -->
-<section class="py-section-gap">
-<div class="max-w-max-container mx-auto px-grid-gutter">
-<div class="mb-16">
-<h2 class="font-h2-section text-h2-section text-surface-white mb-4">Why Telleqt</h2>
-<div class="h-1 w-20 bg-electric-blue"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
-<!-- Large Card 1 -->
-<div class="md:col-span-8 glass-panel p-10 rounded-xl group hover:border-secondary/30 transition-all">
-<div class="flex flex-col h-full">
-<div class="flex justify-between items-start gap-6 mb-8">
-<span class="material-symbols-outlined text-4xl text-secondary">track_changes</span>
-<div class="bg-secondary/10 px-3 py-1 rounded text-secondary text-xs font-label-caps uppercase">Outcome-led</div>
-</div>
-<h3 class="font-h2-section text-2xl text-surface-white mb-4">Outcomes, not tools</h3>
-<p class="font-body-standard text-cool-gray mb-8 max-w-xl">We stay focused on measurable business impact, not tool selection or vendor hype. Before recommending any AI solution we start by finding where value is lost.</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="flex items-start gap-3 font-body-standard text-cool-gray">
-<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
-<span>Fragmented systems → duplicated effort</span>
-</div>
-<div class="flex items-start gap-3 font-body-standard text-cool-gray">
-<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
-<span>Delayed decisions → missed value</span>
-</div>
-<div class="flex items-start gap-3 font-body-standard text-cool-gray">
-<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
-<span>Manual workflows → hidden cost and errors</span>
-</div>
-<div class="flex items-start gap-3 font-body-standard text-cool-gray">
-<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
-<span>Limited visibility → poor allocation</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Small Card 1 -->
-<div class="md:col-span-4 bg-graphite/50 border border-outline/10 p-10 rounded-xl group hover:border-secondary/30 transition-all">
-<span class="material-symbols-outlined text-4xl text-secondary mb-8">person_pin_circle</span>
-<h3 class="font-h2-section text-2xl text-surface-white mb-4">Personalized</h3>
-<p class="font-body-standard text-cool-gray">No generic wrappers. We build bespoke architectures tailored to your unique operational constraints and proprietary data silos.</p>
-</div>
-<!-- Small Card 2 -->
-<div class="md:col-span-4 bg-graphite/50 border border-outline/10 p-10 rounded-xl group hover:border-secondary/30 transition-all">
-<span class="material-symbols-outlined text-4xl text-secondary mb-8">settings_input_component</span>
-<h3 class="font-h2-section text-2xl text-surface-white mb-4">Implementation First</h3>
-<p class="font-body-standard text-cool-gray">We value working code over slide decks. Our approach starts with integrating into your existing pipelines from day one.</p>
-</div>
-<!-- Large Card 2 -->
-<div class="md:col-span-8 glass-panel p-10 rounded-xl group hover:border-secondary/30 transition-all">
-<div class="flex flex-col h-full">
-<div class="flex justify-between items-start">
-<span class="material-symbols-outlined text-4xl text-secondary mb-8">savings</span>
-<div class="bg-secondary/10 px-3 py-1 rounded text-secondary text-xs font-label-caps uppercase">Operational ROI</div>
-</div>
-<h3 class="font-h2-section text-2xl text-surface-white mb-4">Focused on Cost Savings</h3>
-<p class="font-body-standard text-cool-gray mb-8 max-w-xl">AI is an efficiency engine, not a luxury. We measure success by the tangible reduction in operational overhead and the scaling of human intelligence through automated systems.</p>
-<div class="flex gap-12">
-<div>
-<div class="text-3xl font-h1-enterprise text-surface-white mb-1">40%</div>
-<div class="text-xs font-label-caps text-cool-gray uppercase">Avg Cost Reduction</div>
-</div>
-<div>
-<div class="text-3xl font-h1-enterprise text-surface-white mb-1">6mo</div>
-<div class="text-xs font-label-caps text-cool-gray uppercase">Payback Period</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<section class="trust-strip" aria-label="Our team's experience">
+  <div class="home-wrap">
+    <p>Our Team Has Helped</p>
+    <div class="client-logos">
+      <img class="logo-white" src="logos/Globe_Telecom_logo.svg" alt="Globe Telecom"/>
+      <img class="logo-itail" src="logos/iTail_logo.png" alt="iTail"/>
+      <img class="logo-white" src="logos/Telenor_Logo.svg" alt="Telenor"/>
+      <img class="logo-ericsson" src="logos/Ercisson_logo.png" alt="Ericsson"/>
+      <img src="logos/Smart_logo.png" alt="Smart Communications"/>
+    </div>
+  </div>
 </section>
-<!-- Process Section -->
-<section class="py-section-gap bg-surface-container-low relative overflow-hidden">
-<div class="max-w-max-container mx-auto px-grid-gutter relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-<div>
-<h2 class="font-h1-enterprise text-h1-enterprise text-surface-white mb-8">Diagnosis and Implementation in Parallel</h2>
-<p class="font-body-intro text-cool-gray mb-12">Traditional consultants spend months and years analyzing. We operate on a two-track model where system diagnosis and core infrastructure deployment happen simultaneously.</p>
-<div class="space-y-8">
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue flex items-center justify-center text-electric-blue font-bold">1</div>
-<div>
-<h4 class="font-h2-section text-xl text-surface-white mb-2">Diagnosis</h4>
-<p class="font-body-standard text-cool-gray">We analyze data sources and workflows, identify low-hanging opportunities, and prioritize AI implementation by KPIs to maximize business value and cost savings.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue flex items-center justify-center text-electric-blue font-bold">2</div>
-<div>
-<h4 class="font-h2-section text-xl text-surface-white mb-2">Data Consolidation</h4>
-<p class="font-body-standard text-cool-gray">We consolidate data sources and improve data quality, reducing manual entry, duplicates, and noise to build stronger foundation for best outcomes.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue flex items-center justify-center text-electric-blue font-bold">3</div>
-<div>
-<h4 class="font-h2-section text-xl text-surface-white mb-2">Infrastructure Staging</h4>
-<p class="font-body-standard text-cool-gray">Setting up enterprise-grade AI foundations while the strategy is finalized.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-12 h-12 rounded-full border border-electric-blue flex items-center justify-center text-electric-blue font-bold">4</div>
-<div>
-<h4 class="font-h2-section text-xl text-surface-white mb-2">Continuous Scaling</h4>
-<p class="font-body-standard text-cool-gray">Iterative deployment of AI modules with real-time performance tracking.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-square bg-graphite rounded-2xl overflow-hidden shadow-2xl border border-outline/10">
-<img alt="Technical infrastructure" class="w-full h-full object-cover" data-alt="A clean, high-tech server room environment showing sleek, matte-black server racks with glowing cyan status indicators. The scene is photographed from a low, dramatic angle to emphasize scale and industrial strength. The lighting is cold and precise, reflecting off polished metallic surfaces. This image represents the physical backbone of an enterprise AI transformation, emphasizing stability and operational reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfL7nd5msKUY3sjZI2q5RGT_iIJCoNbE2a_wJGBxnndoP4FIcPl0QesIct8IqHvSGo3UKS0yqNbfPOiwcWZ1HEo24munVJyP4ohKUzBAqKm2GxLsswCZRM9BDDnqKQfc5q_VlBc5hwpmGiULvg2LO5tqOVqrc1WHcr-IMYjoR_j-Pt5cMpmuE8Zly_EsuVOltmUghDNbiJh1YDqrx5mGx8nU7LRF8t0z8J8QsmzgOHho4N-uwApOedSqau9qJAjbxcDowk8jx5LUlU"/>
-</div>
-<!-- Floating Glass Metric Card -->
-<div class="absolute -bottom-8 -left-8 glass-panel p-6 rounded-lg max-w-[240px] shadow-2xl">
-<div class="flex items-center gap-4 mb-4">
-<div class="w-10 h-10 bg-secondary/20 rounded flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary">trending_up</span>
-</div>
-<div>
-<p class="text-xs font-label-caps text-cool-gray">Uptime</p>
-<p class="text-xl font-bold text-surface-white">99.99%</p>
-</div>
-</div>
-<div class="w-full h-1.5 bg-graphite rounded-full overflow-hidden">
-<div class="w-[99%] h-full bg-secondary"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<section class="home-section">
+  <div class="home-wrap">
+    <div class="section-intro">
+      <div><span class="eyebrow">Typical starting points</span><h2>Where is your team stuck?</h2></div>
+      <p>Start with one costly bottleneck around your SAP or ERP environment.</p>
+    </div>
+    <div class="outcomes-grid">
+      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">monitoring</span><h3>Reports take days</h3><p>Connect ERP, files, and operational data into a clearer view.</p><p class="outcome-measure">Measure: reporting time saved</p></article>
+      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">account_tree</span><h3>Work gets entered twice</h3><p>Connect workflows and automate repetitive data handling.</p><p class="outcome-measure">Measure: manual effort and errors</p></article>
+      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">deployed_code</span><h3>Your pilot never went live</h3><p>Connect AI to live data and the process your team actually uses.</p><p class="outcome-measure">Measure: impact in real operations</p></article>
+    </div>
+  </div>
 </section>
+
+<section class="home-section delivery-section">
+  <div class="home-wrap">
+    <div class="delivery-head">
+      <div><span class="eyebrow">Your first engagement / Target: 8–12 weeks</span><h2>One use case.<br/>A result you can measure.</h2></div>
+      <a class="text-link" href="approach.html">See how we work<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+    </div>
+    <ol class="delivery-steps">
+      <li><span class="step-index">01 / AGREE</span><h3>A defined scope</h3><p>One workflow, a baseline, and agreed success criteria.</p></li>
+      <li><span class="step-index">02 / CONNECT</span><h3>A usable data path</h3><p>Connect the required sources within your access and security requirements.</p></li>
+      <li><span class="step-index">03 / IMPLEMENT</span><h3>A working pilot</h3><p>A focused solution tested with your operational team.</p></li>
+      <li><span class="step-index">04 / VALIDATE</span><h3>An evidence-based next step</h3><p>Compare results with the baseline and decide whether to scale.</p></li>
+    </ol>
+    <div class="engagement-scope"><p><strong>Your team brings:</strong> a process owner, technical contact, and agreed data access. Scope and timing are confirmed after reviewing readiness.</p><a class="text-link" href="contact.html">Discuss a first use case<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="home-wrap">
+    <div class="section-intro"><div><span class="eyebrow">Our own technology</span><h2>Built for the real world.</h2></div><p>We engineer and integrate your solution, using ALEX or NowMem where they fit the use case.</p></div>
+    <div class="platform-grid">
+      <a class="platform" href="technology.html#alex">
+        <div class="platform-top"><h3>ALEX</h3><span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></div>
+        <p>Real-time machine learning that turns operational data into predictions and automated decisions.</p>
+        <small>Discover the platform &amp; watch the demo</small>
+      </a>
+      <a class="platform" href="technology.html#nowmem">
+        <div class="platform-top"><h3>NowMem</h3><span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></div>
+        <p>Live working memory for AI agents and robots. Business context that stays up to date.</p>
+        <small>Explore NowMem</small>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="home-contact"><div class="home-wrap"><h2>Let's get your transformation moving.</h2><a href="mailto:ai@telleqt.ai">ai@telleqt.ai</a></div></section>
 </main>
 <!-- Footer -->
 <footer class="dark:bg-deep-navy border-t border-outline/10 w-full py-8">
