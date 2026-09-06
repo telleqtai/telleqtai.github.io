@@ -254,73 +254,53 @@
     }
   }
 </style>
+<link rel="stylesheet" href="site.css"/>
+<script src="site.js" defer></script>
 </head>
 <body class="bg-deep-navy text-on-background font-body-standard overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 dark:bg-deep-navy/90 backdrop-blur-xl border-b border-outline/10 shadow-sm">
-<div class="flex justify-between items-center h-20 px-grid-gutter max-w-max-container mx-auto">
-<a class="font-h2-section text-h2-section font-bold text-surface-white tracking-tight" href="index.html">Telleqt</a>
-<!-- Desktop Navigation -->
-<div class="hidden md:flex items-center space-x-8">
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="index.html">Home</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="approach.html">Approach</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="ai-technologies.html">AI Expertise</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200" href="technology.html">Own technology</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="industries.html">Industries</a>
-<a class="font-body-standard text-body-standard text-cool-gray hover:text-surface-white transition-colors duration-200 hover:text-secondary transition-all" href="about.html">About Us</a>
-<a class="font-body-standard text-body-standard text-secondary font-semibold hover:text-secondary transition-all" href="contact.html">Contact</a>
-</div>
-<a class="hidden md:inline-flex bg-electric-blue text-white font-button-text text-button-text px-6 py-3 rounded hover:bg-soft-cyan transition-all scale-95 active:scale-90 transition-transform" href="contact.html">
-                Get Started
-            </a>
-<details class="relative md:hidden z-50">
-<summary aria-label="Open navigation menu" class="list-none w-11 h-11 rounded-lg border border-outline/20 bg-graphite/60 text-surface-white flex items-center justify-center cursor-pointer [&::-webkit-details-marker]:hidden">
-<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
-</summary>
-<div class="absolute right-0 top-14 w-64 rounded-xl border border-outline/10 bg-deep-navy/95 backdrop-blur-xl shadow-2xl shadow-black/30 p-3">
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="index.html">Home</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="approach.html">Approach</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="ai-technologies.html">AI Expertise</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="technology.html">Own technology</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="industries.html">Industries</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="about.html">About Us</a>
-<a class="block px-4 py-3 rounded-lg font-body-standard text-body-standard text-cool-gray hover:text-surface-white hover:bg-graphite/70 transition-colors" href="contact.html">Contact</a>
-<a class="mt-3 flex items-center justify-center rounded-lg bg-electric-blue px-4 py-3 font-button-text text-button-text text-white hover:bg-soft-cyan transition-colors" href="contact.html">Get Started</a>
-</div>
-</details>
-</div>
-</nav>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="index.html" aria-label="Telleqt home">Telleqt</a>
+    <div class="desktop-links"><a href="index.html">Home</a>
+<a href="approach.html">Approach</a>
+<a href="ai-technologies.html">AI Expertise</a>
+<a href="technology.html">Own technology</a>
+<a href="industries.html">Industries</a>
+<a href="about.html">About Us</a>
+<a href="contact.html" aria-current="page">Contact</a></div>
+    <a class="nav-cta" href="contact.html">Get Started</a>
+    <details class="mobile-menu">
+      <summary aria-label="Navigation menu"><span class="material-symbols-outlined" aria-hidden="true">menu</span></summary>
+      <div class="mobile-links"><a href="index.html">Home</a>
+<a href="approach.html">Approach</a>
+<a href="ai-technologies.html">AI Expertise</a>
+<a href="technology.html">Own technology</a>
+<a href="industries.html">Industries</a>
+<a href="about.html">About Us</a>
+<a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="contact.html">Get Started</a></div>
+    </details>
+  </nav>
+</header>
 <!-- Hero / Content Section -->
-<main class="pt-40 pb-section-gap px-grid-gutter max-w-max-container mx-auto">
+<main id="main-content" class="pt-40 pb-section-gap px-grid-gutter max-w-max-container mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter">
 <!-- Left Column: Context -->
 <div class="lg:col-span-5 flex flex-col justify-start">
-<span class="font-label-caps text-label-caps text-secondary mb-6 block">READY FOR THE FUTURE?</span>
+<span class="font-label-caps text-label-caps text-secondary mb-6 block">LET’S MOVE FORWARD</span>
 <h1 class="font-h1-enterprise text-h1-enterprise text-surface-white mb-8">
-                    Let’s Discuss Your AI Transformation
+                    Let's discuss your bottleneck.
                 </h1>
 <p class="font-body-intro text-body-intro text-cool-gray mb-12">
-                    If your organization has already tried AI transformation and struggled to reach measurable results, it’s time for an implementation-first approach. We move past the hype to deliver industrial-strength operational intelligence.
+                    Start with one process that costs too much time, effort, or money. A short description is enough to start the conversation.
                 </p>
-<div class="space-y-8">
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 bg-graphite rounded flex items-center justify-center border border-outline/10">
-<span class="material-symbols-outlined text-secondary">precision_manufacturing</span>
-</div>
-<div>
-<h4 class="text-surface-white font-semibold">Technical Authority</h4>
-<p class="text-cool-gray text-sm">Deep engineering expertise in industrial system architectures.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 bg-graphite rounded flex items-center justify-center border border-outline/10">
-<span class="material-symbols-outlined text-secondary">verified_user</span>
-</div>
-<div>
-<h4 class="text-surface-white font-semibold">Operational Stability</h4>
-<p class="text-cool-gray text-sm">Focused on mission-critical uptime and secure data handling.</p>
-</div>
-</div>
+<div class="conversation-agenda">
+<h2>Our first conversation</h2>
+<ol>
+<li><span aria-hidden="true">01</span><div><h3>Understand the bottleneck</h3><p>What is stuck, what you have tried, and what it costs.</p></div></li>
+<li><span aria-hidden="true">02</span><div><h3>Check the practical fit</h3><p>Your systems, data access, and operational constraints.</p></div></li>
+<li><span aria-hidden="true">03</span><div><h3>Define a next step</h3><p>Whether a focused engagement makes sense and what to scope.</p></div></li>
+</ol>
 </div>
 <!-- Abstract Decorative Element -->
 <div class="mt-16 hidden lg:block">
@@ -336,11 +316,16 @@
 <span class="font-label-caps text-label-caps text-secondary mb-6 block">EMAIL US</span>
 <h2 class="font-h2-section text-h2-section text-surface-white mb-6">Write to Telleqt</h2>
 <p class="font-body-standard text-body-standard text-cool-gray mb-10 max-w-xl">
-                        Tell us about your stalled transformation effort, operational constraints, and the business results you want to reach with AI.
+                        Which process is stuck? Which systems are involved? What would a useful result look like?
                     </p>
-<a class="inline-flex text-surface-white font-body-intro text-body-intro hover:text-secondary transition-colors break-all" href="mailto:ai@telleqt.ai">
+<div class="email-actions">
+<a id="contact-email" class="inline-flex text-surface-white font-body-intro text-body-intro hover:text-secondary transition-colors break-all" href="mailto:ai@telleqt.ai?subject=Discuss%20our%20SAP%2FERP%20or%20AI%20bottleneck&amp;body=Hi%20Telleqt%2C%0D%0A%0D%0AThe%20process%20we%20want%20to%20improve%3A%20%0D%0A%0D%0AOur%20systems%3A%20%0D%0A%0D%0AThe%20result%20we%20need%3A%20%0D%0A">
                         ai@telleqt.ai
 </a>
+<button class="copy-email" type="button" data-copy-email="ai@telleqt.ai" hidden><span class="material-symbols-outlined" aria-hidden="true">content_copy</span>Copy email</button>
+</div>
+<p class="email-status" role="status" aria-live="polite"></p>
+<p class="contact-note">No presentation needed. Start with a brief outline; we can discuss data access later.</p>
 <div class="mt-10 pt-8 border-t border-outline/10">
 <span class="font-label-caps text-label-caps text-secondary mb-4 block">COMPANY ADDRESS</span>
 <address class="not-italic font-body-standard text-body-standard text-cool-gray leading-relaxed">
