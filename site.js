@@ -30,64 +30,110 @@
     });
   }
 
-  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if ('IntersectionObserver' in window) {
+  const { gsap } = window;
+  if (!gsap || !('IntersectionObserver' in window)) return;
+  const revealed = new WeakSet();
+  const motion = gsap.matchMedia();
+
+  // Every effect is optional: the HTML remains readable before GSAP or without it.
+  motion.add('(prefers-reduced-motion: no-preference)', context => {
+    const intro = gsap.timeline({ defaults: { duration: .85, ease: 'power3.out' } });
+    const heading = document.querySelector('.hero-copy, .page-head .home-wrap');
+    if (heading && !revealed.has(heading)) {
+      revealed.add(heading);
+      intro.from(heading.children, { y: 12, opacity: .75, stagger: .075, clearProps: 'transform,opacity' });
+    }
+
+    const groups = '.outcomes-grid, .delivery-steps, .platform-grid, .capability-grid, .operational-flow';
+    context.add('reveal', element => {
+      if (revealed.has(element)) return;
+      revealed.add(element);
+      const items = element.matches(groups) ? [...element.children] : [element];
+      const sequence = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      sequence.from(items, {
+        y: 16, opacity: .75, duration: .8,
+        stagger: .09, clearProps: 'transform,opacity',
+      });
+      if (element.matches('.delivery-steps, .operational-flow')) {
+        sequence.fromTo(items, { '--line-reveal': 0 }, {
+          '--line-reveal': 1, duration: 1.05, stagger: .12,
+        }, 0);
+      }
+    });
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        if (!motion.matches) entry.target.classList.add('reveal');
+        context.reveal(entry.target);
         observer.unobserve(entry.target);
       });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.outcome, .delivery-steps li, .platform').forEach(el => observer.observe(el));
-  }
+    }, { threshold: .08 });
+    document.querySelectorAll(`${groups}, .section-intro, .delivery-head, .page-section > .home-wrap > h2`).forEach(element => {
+      if (!revealed.has(element)) observer.observe(element);
+    });
 
-  const canvas = document.querySelector('.signal-canvas');
-  const ctx = canvas?.getContext('2d');
-  if (!ctx) return;
-  let width = 0, height = 0, frame = 0, visible = true;
-  function resize() {
-    width = canvas.clientWidth;
-    height = canvas.clientHeight;
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = width * ratio;
-    canvas.height = height * ratio;
-    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-  }
-  // Packets follow parallel signal paths, keeping the copy area quiet.
-  function draw(time) {
-    ctx.clearRect(0, 0, width, height);
-    for (let lane = 0; lane < 7; lane++) {
-      const start = width * .49;
-      const y = height * .18 + lane * height * .095;
-      const bend = width * (.68 + lane * .012);
-      const endY = y - height * .13;
-      ctx.beginPath();
-      ctx.moveTo(start, y);
-      ctx.lineTo(bend, y);
-      ctx.lineTo(bend + 48, endY);
-      ctx.lineTo(width, endY);
-      ctx.strokeStyle = lane % 3 ? '#7bd0ff22' : '#91d7b52b';
-      ctx.lineWidth = 1;
-      ctx.stroke();
-      const progress = ((time / 12000) + lane * .173) % 1;
-      const x = start + progress * (width - start);
-      const py = x < bend ? y : x < bend + 48 ? y + (endY - y) * (x - bend) / 48 : endY;
-      ctx.fillStyle = lane % 3 ? '#9ee0ff' : '#91d7b5';
-      ctx.fillRect(x - 2, py - 1.5, 6, 3);
+    const visibility = () => intro.paused(document.hidden);
+    document.addEventListener('visibilitychange', visibility);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', visibility);
+    };
+  });
+
+  // Desktop depth has its own lifecycle, so resizing never restarts page reveals.
+  motion.add('(prefers-reduced-motion: no-preference) and (min-width: 1024px) and (hover: hover) and (pointer: fine)', () => {
+    const hero = document.querySelector('.home-hero');
+    const media = hero?.querySelector('.home-hero-media');
+    if (!media) return;
+    const image = media.querySelector('.hero-flow-scene') || media.querySelector('img');
+    const entrance = gsap.timeline();
+    if (!revealed.has(image)) {
+      revealed.add(image);
+      entrance.fromTo(image, { scale: 1.065 }, { scale: 1.015, duration: 1.5, ease: 'power3.out' });
+    } else {
+      gsap.set(image, { scale: 1.015 });
     }
-    frame = requestAnimationFrame(draw);
-  }
-  function updateMotion() {
-    cancelAnimationFrame(frame);
-    if (!motion.matches && visible && !document.hidden) frame = requestAnimationFrame(draw);
-  }
-  new ResizeObserver(resize).observe(canvas);
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(entries => { visible = entries[0].isIntersecting; updateMotion(); }).observe(canvas);
-  }
-  motion.addEventListener('change', updateMotion);
-  document.addEventListener('visibilitychange', updateMotion);
-  resize();
-  updateMotion();
+
+    // Reuse tweens only in response to input; never write the browser's scroll position.
+    const moveX = gsap.quickTo(media, 'x', { duration: .85, ease: 'power3.out' });
+    const moveY = gsap.quickTo(media, 'y', { duration: .85, ease: 'power3.out' });
+    const scrollDepth = gsap.quickTo(image, 'y', { duration: .6, ease: 'power2.out' });
+    let visible = hero.getBoundingClientRect().bottom > 0;
+    const move = event => {
+      if (!visible || document.hidden || event.pointerType === 'touch') return;
+      const rect = hero.getBoundingClientRect();
+      moveX(((event.clientX - rect.left) / rect.width - .5) * 16);
+      moveY(((event.clientY - rect.top) / rect.height - .5) * 10);
+    };
+    const resetDepth = () => { moveX(0); moveY(0); };
+    const scroll = () => {
+      if (!visible || document.hidden) return;
+      const rect = hero.getBoundingClientRect();
+      scrollDepth(gsap.utils.clamp(0, 1, -rect.top / rect.height) * 24);
+    };
+    const visibility = () => {
+      entrance.paused(document.hidden || !visible);
+      if (document.hidden || !visible) {
+        [moveX, moveY, scrollDepth].forEach(move => move.tween.pause());
+      } else {
+        resetDepth();
+        scroll();
+      }
+    };
+    const observer = new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
+      visibility();
+    });
+    observer.observe(hero);
+    hero.addEventListener('pointermove', move, { passive: true });
+    hero.addEventListener('pointerleave', resetDepth);
+    window.addEventListener('scroll', scroll, { passive: true });
+    document.addEventListener('visibilitychange', visibility);
+    return () => {
+      observer.disconnect();
+      hero.removeEventListener('pointermove', move);
+      hero.removeEventListener('pointerleave', resetDepth);
+      window.removeEventListener('scroll', scroll);
+      document.removeEventListener('visibilitychange', visibility);
+    };
+  });
 })();

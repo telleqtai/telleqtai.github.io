@@ -103,12 +103,14 @@
       }
     </script>
 
-<title>Telleqt | Get Your AI Transformation Back on Track</title>
-<meta name="description" content="Stuck with SAP, ERP, or stalled AI pilots? Telleqt connects your data and delivers practical AI, targeting measurable results in 8–12 weeks."/>
+<title>Telleqt | Enterprise AI Without Rebuilding Your Core</title>
+<meta name="description" content="Cut operational losses with AI alongside SAP and other legacy systems. First working results within a month, without rebuilding your core systems."/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 
 <link rel="stylesheet" href="site.css"/>
+<script src="vendor/gsap/gsap.min.js" defer></script>
 <script src="site.js" defer></script>
+<script src="hero-flow.js" defer></script>
 </head>
 <body class="bg-deep-navy text-on-background selection:bg-electric-blue selection:text-white">
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -122,7 +124,7 @@
 <a href="industries.html">Industries</a>
 <a href="about.html">About Us</a>
 <a href="contact.html">Contact</a></div>
-    <a class="nav-cta" href="contact.html">Get Started</a>
+    <a class="nav-cta" href="contact.html">Talk to our team</a>
     <details class="mobile-menu">
       <summary aria-label="Navigation menu"><span class="material-symbols-outlined" aria-hidden="true">menu</span></summary>
       <div class="mobile-links"><a href="index.html" aria-current="page">Home</a>
@@ -131,32 +133,39 @@
 <a href="technology.html">Own technology</a>
 <a href="industries.html">Industries</a>
 <a href="about.html">About Us</a>
-<a href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Get Started</a></div>
+<a href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Talk to our team</a></div>
     </details>
   </nav>
 </header>
 <main id="main-content">
 <section class="home-hero">
-  <div class="home-hero-media" aria-hidden="true"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtXjZpWYYbH-apMrlXeFeoy18vx_wP7Xx2d_QHEYW8eqNbpjKJq6sK1Bd1EBNVJ1pBTorsRkR44gzSztMecbQPABQNvuqL4Z3cFVPwmt0_EG2LPDyDQoKbmlZHzazE32zc7RrGzt2g_Fce3izy_fhJBojfm8kz-MUNSWVHf7vCrJgTjW1zGNDcr1rZThuq0Rzzf9wm8nM3-EEqQjKfagT3yxasacCeUkvNMnG58FyEhYrKtMGE7XZdrypc6FPjTB8hIfaBLsc6UhD5" alt="" fetchpriority="high"/></div>
-  <canvas class="signal-canvas" aria-hidden="true"></canvas>
+  <div class="home-hero-media" aria-hidden="true">
+    <div class="hero-flow-scene">
+      <img class="hero-poster" src="img/hero-ai-installation.webp" srcset="img/hero-ai-installation-small.webp 960w, img/hero-ai-installation.webp 1672w" sizes="(max-width: 767px) 600px, 100vw" width="1672" height="941" alt="" fetchpriority="high" decoding="async"/>
+      <img class="hero-legacy-base hero-layer" src="img/hero-legacy-base.webp" srcset="img/hero-legacy-base-small.webp 960w, img/hero-legacy-base.webp 1672w" sizes="(max-width: 767px) 600px, 100vw" width="1672" height="941" alt="" decoding="async"/>
+      <canvas class="hero-flow-canvas"></canvas>
+      <img class="hero-ai-module hero-layer" src="img/hero-ai-module.webp" srcset="img/hero-ai-module-small.webp 960w, img/hero-ai-module.webp 1671w" sizes="(max-width: 767px) 600px, 100vw" width="1672" height="941" alt="" decoding="async"/>
+      <img class="hero-install-hand hero-layer" src="img/hero-install-hand.webp" srcset="img/hero-install-hand-small.webp 960w, img/hero-install-hand.webp 1672w" sizes="(max-width: 767px) 600px, 100vw" width="1672" height="941" alt="" decoding="async"/>
+    </div>
+  </div>
   <div class="home-wrap">
     <div class="hero-copy">
       <span class="eyebrow">Telleqt / Enterprise AI transformation</span>
-      <h1>AI transformation.<span>Back on track.</span></h1>
-      <p>Stalled SAP, ERP, or AI initiative? Our engineers connect your data and deliver a focused AI use case with measurable business impact.</p>
+      <h1>Cut operational losses with AI.<span>No legacy rebuild.</span></h1>
+      <p>Telleqt helps enterprises running on SAP and other legacy systems connect fragmented operations, automate costly workflows, and reduce errors, waste, and downtime.</p>
       <div class="hero-actions">
-        <a class="primary-link" href="contact.html">Discuss your bottleneck<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        <a class="primary-link" href="contact.html">Talk to our team<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         <a class="secondary-link" href="approach.html">Our approach</a>
       </div>
-      <div class="hero-note"><span class="material-symbols-outlined" aria-hidden="true">deployed_code</span>Senior engineers. Your systems. Working solutions.</div>
     </div>
   </div>
+  <button class="hero-motion-toggle" type="button" aria-label="Pause animation" aria-pressed="false" title="Pause animation" hidden><span class="material-symbols-outlined" aria-hidden="true">pause</span></button>
 </section>
 
 <section class="recovery-band">
   <div class="home-wrap recovery-layout">
-    <div><span class="eyebrow">A practical way forward</span><h2>Stuck with SAP, ERP,<br/>or another AI pilot?</h2></div>
-    <p>We work with the systems you already have, uncover lost value, and put AI into operation. <strong>Our target: your first measurable results in 8–12 weeks.</strong></p>
+    <div><span class="eyebrow">Your first engagement</span><h2>First working results within a month.<br/>Not a year.</h2></div>
+    <p>Start where manual work, errors, or delays cost the business most. Our expert team connects your live data, delivers a working AI workflow, and measures the outcome against an agreed baseline.</p>
   </div>
 </section>
 
@@ -176,13 +185,13 @@
 <section class="home-section">
   <div class="home-wrap">
     <div class="section-intro">
-      <div><span class="eyebrow">Typical starting points</span><h2>Where is your team stuck?</h2></div>
-      <p>Start with one costly bottleneck around your SAP or ERP environment.</p>
+      <div><span class="eyebrow">Enterprise transformation barriers</span><h2>Complex systems.<br/>Real business losses.</h2></div>
+      <p>Three barriers between the systems that run your business and the AI that could improve it.</p>
     </div>
     <div class="outcomes-grid">
-      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">monitoring</span><h3>Reports take days</h3><p>Connect ERP, files, and operational data into a clearer view.</p><p class="outcome-measure">Measure: reporting time saved</p></article>
-      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">account_tree</span><h3>Work gets entered twice</h3><p>Connect workflows and automate repetitive data handling.</p><p class="outcome-measure">Measure: manual effort and errors</p></article>
-      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">deployed_code</span><h3>Your pilot never went live</h3><p>Connect AI to live data and the process your team actually uses.</p><p class="outcome-measure">Measure: impact in real operations</p></article>
+      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">hub</span><h3>Legacy complexity blocks AI</h3><p>Custom code and tightly coupled integrations make change costly and risky. AI deployment waits behind core-system dependencies.</p><p class="outcome-response"><strong>Our focus:</strong> add AI capabilities around your core systems through controlled, incremental delivery.</p><p class="outcome-measure">Measure: time to deploy a working use case</p></article>
+      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">sync_problem</span><h3>Disconnected data undermines AI</h3><p>Legacy, production, and warehouse systems disagree on orders, stock, and asset states. AI lacks reliable operational context.</p><p class="outcome-response"><strong>Our focus:</strong> align definitions, reconcile records, and synchronize the data AI needs.</p><p class="outcome-measure">Measure: data consistency and freshness</p></article>
+      <article class="outcome"><span class="material-symbols-outlined" aria-hidden="true">savings</span><h3>Manual exceptions erode margin</h3><p>Teams reconcile purchasing, production, and fulfillment by hand. Errors and delays create rework, excess inventory, and avoidable downtime.</p><p class="outcome-response"><strong>Our focus:</strong> automate cross-system workflows and prioritize exceptions for human review.</p><p class="outcome-measure">Measure: rework cost, inventory, and downtime</p></article>
     </div>
   </div>
 </section>
@@ -190,22 +199,22 @@
 <section class="home-section delivery-section">
   <div class="home-wrap">
     <div class="delivery-head">
-      <div><span class="eyebrow">Your first engagement / Target: 8–12 weeks</span><h2>One use case.<br/>A result you can measure.</h2></div>
+      <div><span class="eyebrow">Your first month</span><h2>A working result.<br/>An outcome you can measure.</h2></div>
       <a class="text-link" href="approach.html">See how we work<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
     </div>
     <ol class="delivery-steps">
-      <li><span class="step-index">01 / AGREE</span><h3>A defined scope</h3><p>One workflow, a baseline, and agreed success criteria.</p></li>
-      <li><span class="step-index">02 / CONNECT</span><h3>A usable data path</h3><p>Connect the required sources within your access and security requirements.</p></li>
-      <li><span class="step-index">03 / IMPLEMENT</span><h3>A working pilot</h3><p>A focused solution tested with your operational team.</p></li>
-      <li><span class="step-index">04 / VALIDATE</span><h3>An evidence-based next step</h3><p>Compare results with the baseline and decide whether to scale.</p></li>
+      <li><span class="step-index">01 / DEFINE</span><h3>Set the baseline</h3><p>Choose one costly workflow. Agree the business baseline and success criteria before building.</p></li>
+      <li><span class="step-index">02 / CONNECT</span><h3>Connect existing systems</h3><p>Connect the data this workflow needs through an Operational Data Layer alongside your core.</p></li>
+      <li><span class="step-index">03 / DELIVER</span><h3>Put AI into operation</h3><p>Deliver the first working results for the agreed workflow, with human review where needed.</p></li>
+      <li><span class="step-index">04 / MEASURE</span><h3>Evaluate the economics</h3><p>Compare results with the baseline, including the cost of running AI. Scale where value is demonstrated.</p></li>
     </ol>
-    <div class="engagement-scope"><p><strong>Your team brings:</strong> a process owner, technical contact, and agreed data access. Scope and timing are confirmed after reviewing readiness.</p><a class="text-link" href="contact.html">Discuss a first use case<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div>
+    <div class="engagement-scope"><p><strong>A focused first month:</strong> one agreed workflow, supported by your process owner and technical lead. We confirm data readiness and integration approvals before kickoff. Broader rollout follows measured results.</p><a class="text-link" href="contact.html">Discuss your first workflow<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div>
   </div>
 </section>
 
 <section class="home-section">
   <div class="home-wrap">
-    <div class="section-intro"><div><span class="eyebrow">Our own technology</span><h2>Built for the real world.</h2></div><p>We engineer and integrate your solution, using ALEX or NowMem where they fit the use case.</p></div>
+    <div class="section-intro"><div><span class="eyebrow">Optional technology accelerators</span><h2>Extra capability.<br/>Where it adds value.</h2></div><p>Our Professional Services team selects technology around your needs. ALEX and NowMem are optional, deployed where they improve the solution.</p></div>
     <div class="platform-grid">
       <a class="platform" href="technology.html#alex">
         <div class="platform-top"><h3>ALEX</h3><span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></div>
@@ -220,7 +229,7 @@
     </div>
   </div>
 </section>
-<section class="home-contact"><div class="home-wrap"><h2>Let's get your transformation moving.</h2><a href="mailto:ai@telleqt.ai">ai@telleqt.ai</a></div></section>
+<section class="home-contact"><div class="home-wrap"><h2>Bring AI to the business you already run.</h2><a href="mailto:ai@telleqt.ai">ai@telleqt.ai</a></div></section>
 </main>
 <!-- Footer -->
 <footer class="dark:bg-deep-navy border-t border-outline/10 w-full py-8">
