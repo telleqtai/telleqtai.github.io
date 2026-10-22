@@ -30,6 +30,36 @@
     });
   }
 
+  const overview = document.querySelector('.overview-section');
+  if (overview) {
+    const video = overview.querySelector('video');
+    const play = overview.querySelector('.overview-play');
+    const poster = overview.querySelector('.overview-poster');
+    const status = overview.querySelector('.overview-status');
+    const showError = () => {
+      const hadFocus = document.activeElement === video;
+      video.pause();
+      video.hidden = true;
+      play.hidden = false;
+      poster.hidden = false;
+      status.hidden = false;
+      if (hadFocus) play.focus({ preventScroll: true });
+    };
+    video.addEventListener('error', showError);
+    play.addEventListener('click', event => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      status.hidden = true;
+      video.hidden = false;
+      play.hidden = true;
+      poster.hidden = true;
+      // Keep the large media file entirely off the network until the visitor plays it.
+      video.src = play.href;
+      video.focus({ preventScroll: true });
+      video.play().catch(showError);
+    });
+  }
+
   const { gsap } = window;
   if (!gsap || !('IntersectionObserver' in window)) return;
   const revealed = new WeakSet();
